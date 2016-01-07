@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V153.Val.Cites.NotificarRealitzacio">
+<Super>WiFIS.V153.Val.General</Super>
+<TimeCreated>63504,79882.57324</TimeCreated>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id$</Default>
+</Parameter>
+
+<Method name="Validar">
+<Description>
+Validar un mensaje HL7</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pMsg:EnsLib.HL7.Message</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error = ""
+		
+		set ret = $$$ADDSC(ret,..MSH(pMsg.FindSegment("MSH"),"SIU","Z77","SIU_S12","AL",error))
+		set ret = $$$ADDSC(ret,..SCH(pMsg.FindSegment("SCH"),error))
+		set ret = $$$ADDSC(ret,..TQ1(pMsg.FindSegment("TQ1"),error))
+		set ret = $$$ADDSC(ret,..PID(pMsg.FindSegment("PID"),error,0))
+		set ret = $$$ADDSC(ret,..AIS(pMsg.FindSegment("AIS"),error))
+			
+	} catch ex {
+		set ret = $$$ADDSC(ret, ex.AsStatus())
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="SCH">
+<Description>
+Segmento SCH</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento PV1"))
+			quit
+		}
+		
+		// SCH.2
+		if pSeg.GetValueAt("2.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.2.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("2.2"),error_"SCH.2.2 "))
+		
+		// SCH.6
+		if pSeg.GetValueAt("6.1")'="CR" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.6.1=CR"))
+		if pSeg.GetValueAt("6.3")'="99REC" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.6.3=99REC"))
+		
+		/*
+		// SCH.7
+		set val=pSeg.GetValueAt("7")
+		if val'="" set ret=$$$ADDSC(ret,..TablaHL7(pSeg.GetValueAt("7.1"),"99RAO",error_"SCH.7.1 "))
+		if val'="",pSeg.GetValueAt("7.3")'="HL70276",pSeg.GetValueAt("7.3")'="99RAO" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.7.3=[HL70276,99RAO]"))
+		
+		// SCH.8
+		set val=pSeg.GetValueAt("8")
+		if val'="" set ret=$$$ADDSC(ret,..TablaHL7(pSeg.GetValueAt("8.1"),"99TIC",error_"SCH.8.1 "))
+		if val'="",pSeg.GetValueAt("8.3")'="HL70277",pSeg.GetValueAt("8.3")'="99TIC" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.8.3=[HL70277,99TIC]"))
+		*/
+		
+		// SCH.25
+		if pSeg.GetValueAt("25.1")'="Complete" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.25.1=Complete"))
+		if pSeg.GetValueAt("25.3")'="HL70278",pSeg.GetValueAt("25.3")'="99ESC" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.25.3=[HL70278,99ESC]"))
+		
+		// SCH.26
+		if pSeg.GetValueAt("26.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.26.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("26.2"),error_"SCH.26.2 "))
+		
+		// SCH.27
+		if pSeg.GetValueAt("27.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"SCH.27.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("27.2"),error_"SCH.27.2 "))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="TQ1">
+<Description>
+Segmento TQ1</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento TQ1"))
+			quit
+		}
+
+		// TQ1.1
+		set ret=$$$ADDSC(ret,..FechaHora(pSeg.GetValueAt("1.1"), error_"TQ1.1.1"))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="AIS">
+<Description>
+Segmento AIS</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento AIS"))
+			quit
+		}
+
+		/*
+		// AIS.3
+		set val=pSeg.GetValueAt("3.3")
+		if val'="SERAM",val'="SEM",val'="LN",val'="SCT" set ret=$$$ADDSC(ret,$$$ValError(error_"AIS.3.3=[SERAM,SEM,LN,SCT]"))
+		*/
+		
+		// AIS.10
+		if pSeg.GetValueAt("10.1")'="Complete" set ret=$$$ADDSC(ret,$$$ValError(error_"AIS.10.1=Complete"))
+		if pSeg.GetValueAt("10.3")'="HL70278",pSeg.GetValueAt("10.3")'="99ESC" set ret=$$$ADDSC(ret,$$$ValError(error_"AIS.10.3=[HL70278,99ESC]"))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="AIL">
+<Description>
+Segmento AIL</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento AIL"))
+			quit
+		}
+
+		// AIL.3
+		if pSeg.GetValueAt("3.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"AIL.3.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("3.4.1"),error_"AIL.3.4.1 "))
+		
+		// AIS.12
+		if pSeg.GetValueAt("12.1")'="Booked" set ret=$$$ADDSC(ret,$$$ValError(error_"AIL.12.1=Booked"))
+		if pSeg.GetValueAt("12.3")'="HL70278",pSeg.GetValueAt("12.3")'="99ESC" set ret=$$$ADDSC(ret,$$$ValError(error_"AIL.12.3=[HL70278,99ESC]"))
+		
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+</Class>
+</Export>

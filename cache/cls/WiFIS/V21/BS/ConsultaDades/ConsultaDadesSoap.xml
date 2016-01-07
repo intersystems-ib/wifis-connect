@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V21.BS.ConsultaDades.ConsultaDadesSoap">
+<ProcedureBlock>1</ProcedureBlock>
+<Super>WiFIS.V21.BS.Service</Super>
+<TimeCreated>63501,54295.005946</TimeCreated>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V21/BS/ConsultaDades/ConsultaDadesSoap.xml#1 $</Default>
+</Parameter>
+
+<Parameter name="NAMESPACE">
+<Description>
+This is the namespace used by the Service</Description>
+<Default>http://tempuri.org/</Default>
+</Parameter>
+
+<Parameter name="OUTPUTTYPEATTRIBUTE">
+<Description>
+Use xsi:type attribute for literal types.</Description>
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="SECURITYIN">
+<Description>
+Determines handling of Security header.</Description>
+<Default>ALLOW</Default>
+</Parameter>
+
+<Parameter name="SERVICENAME">
+<Description>
+This is the name of the Service</Description>
+<Default>ConsultaDades</Default>
+</Parameter>
+
+<Parameter name="SOAPVERSION">
+<Description>
+This is the SOAP version supported by the service.</Description>
+<Default>1.1</Default>
+</Parameter>
+
+<Parameter name="TYPENAMESPACE">
+<Description>
+This is the namespace used for types by the Service</Description>
+<Default>http://pdm.isalut.gencat.net/ConsultaDades</Default>
+</Parameter>
+
+<Parameter name="USECLASSNAMESPACES">
+<Description>
+Namespaces of referenced classes will be used in the WSDL.</Description>
+<Default>1</Default>
+</Parameter>
+
+<Method name="ConsultarCercaPacient">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaCercaPacientResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/ConsultarCercaPacient</SoapAction>
+<SoapMessageName>ConsultaCercaPacientResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+
+<Method name="ConsultarDadesCliniques">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaDadesCliniquesResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/ConsultarDadesCliniques</SoapAction>
+<SoapMessageName>ConsultaDadesCliniquesResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+
+<Method name="ConsultarDadesDemografiques">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaDadesDemografiquesResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/ConsultarDadesDemografiques</SoapAction>
+<SoapMessageName>ConsultaDadesDemografiquesResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+
+<Method name="ConsultarEstatOrdre">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaEstatOrdreResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/ConsultarEstatOrdre</SoapAction>
+<SoapMessageName>ConsultaEstatOrdreResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+
+<Method name="RespondreConsultaCercaPacient">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaCercaPacientRespostaResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/RespondreConsultaCercaPacient</SoapAction>
+<SoapMessageName>ConsultaCercaPacientRespostaResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+
+<Method name="RespondreConsultaDadesCliniques">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaDadesCliniquesRespostaResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/RespondreConsultaDadesCliniques</SoapAction>
+<SoapMessageName>ConsultaDadesCliniquesRespostaResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+
+<Method name="RespondreConsultaDadesDemografiques">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaDadesDemografiquesRespostaResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/RespondreConsultaDadesDemografiques</SoapAction>
+<SoapMessageName>ConsultaDadesDemografiquesRespostaResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+
+<Method name="RespondreConsultaEstatOrdre">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V21.BS.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="ConsultaEstatOrdreRespostaResponseResult"</ReturnTypeParams>
+<SoapAction>http://pdm.isalut.gencat.net/ConsultaDades/RespondreConsultaEstatOrdre</SoapAction>
+<SoapMessageName>ConsultaEstatOrdreRespostaResponse</SoapMessageName>
+<Implementation><![CDATA[	quit ..Forward(any,"ConsultaDades",$$$CurrentMethod)
+]]></Implementation>
+</Method>
+</Class>
+</Export>

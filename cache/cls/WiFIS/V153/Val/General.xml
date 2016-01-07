@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V153.Val.General">
+<Description>
+Clase común para validación de mensajes WiFIS</Description>
+<IncludeCode>WiFIS</IncludeCode>
+<Super>%RegisteredObject</Super>
+<TimeCreated>63503,36019.680067</TimeCreated>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id$</Default>
+</Parameter>
+
+<Method name="Validar">
+<Description>
+Validar un mensaje HL7</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pMsg:EnsLib.HL7.Message</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="Test">
+<Description>
+Probar la validación de un mensaje HL7 (útil para invocarlo desde Terminal)</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pFile:%String,pTitle:%String</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set hl7 = ##class(EnsLib.HL7.Message).ImportFromFile(pFile)
+		set tSC = ..Validar(hl7)
+		
+		set xml = ##class(ITB.HL7.Util.Convert).ER7ToXML(hl7,.sc,"WIFIS")
+		if $$$ISERR(sc) $$$ThrowStatus(sc)
+		
+		$$$THROWONERROR(tSC, ..ResultadoValidacion(hl7,xml,tSC,pTitle,.stream))
+		write stream.Read()
+	} catch ex {
+		set ret = ex.AsStatus()
+		do $system.Status.DisplayError(ret)
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="ResultadoValidacion">
+<Description>
+Generar informe de resultado validación</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec><![CDATA[pER7:EnsLib.HL7.Message,pXml:%Stream.Object,pResult:%String,pTitle:%String,&pStream:%Stream.FileCharacter]]></FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set err = 0
+		if $$$ISERR(pResult) {
+			do DecomposeStatus^%apiOBJ(pResult,.err,"-d")
+		}
+		
+		set pStream = ##class(%Stream.FileCharacter).%New()
+		do pStream.WriteLine("WiFIS: "_pTitle)
+		do pStream.WriteLine("==================================")
+		do pStream.WriteLine("Mensaje ER7:")
+		do pStream.WriteLine(pER7.OutputToString())
+		do pStream.WriteLine("==================================")
+		if $isobject(pXml) {
+			do pStream.WriteLine("Mensaje XML:")
+			do pXml.Rewind()
+			do pStream.WriteLine(pXml.Read())
+		}
+		do pStream.WriteLine("==================================")
+		do pStream.WriteLine("Errores ("_err_"):")
+		for i=1:1:err {
+			set text = err(i)
+			if $data(err(i,"param",1)) set text = err(i,"param",1)
+			do pStream.WriteLine(i_": "_text)
+		}
+	} catch ex {
+		set ret = ex.AsStatus()
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="Centro">
+<Description>
+Formato Centros</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pCentro:%String,pError:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set tSC = $$$OK
+		
+		set error=pError_"("_pCentro_") formato "
+		
+		set m1=pCentro?1"E"1"P"1"."4AN
+		if 'm1 set tSC=$$$ADDSC(tSC,$$$ValError(error_"EP.nnnn"))
+		 
+		set m2=pCentro?1"U"1"P"1"."4AN
+		if 'm2 set tSC=$$$ADDSC(tSC,$$$ValError(error_"UP.nnnn"))
+		
+		set m3=pCentro?1"C"1"O"1"C"1"."1"E"8AN
+		if 'm3 set tSC=$$$ADDSC(tSC,$$$ValError(error_"COC.Ennnnnnnn"))
+		
+		set m4=pCentro?1"C"1"O"1"C"1"."1"H"8AN
+		if 'm4 set tSC=$$$ADDSC(tSC,$$$ValError(error_"COC.Hnnnnnnnn"))
+		
+		if 'm1,'m2,'m3,'m4 set ret=tSC
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="FechaHora">
+<Description>
+Formato FechaHora HL7</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pVal:%String,pError:%String=""</FormalSpec>
+<Implementation><![CDATA[
+	// TODO: validacion formato fechahora según HL7.
+	quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="Email">
+<Description>
+Formato Email</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pVal:%String,pError:%String=""</FormalSpec>
+<Implementation><![CDATA[
+	// TODO: validacion formato email
+	quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="CodigoColegiado">
+<Description>
+Formato Codigo Colegiado</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pVal:%String,pError:%String=""</FormalSpec>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		if $length(pVal)'=9 set ret=$$$ADDSC(ret,$$$ValError(pError_"("_pVal_") longitud=9"))
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="ISO31662ESP">
+<Description>
+Comprobar que código comunidad autónoma está en ISO3166-2</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pCode:%String="",pError:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError
+		set code = $case(pCode,"AN":1,"AR":1,"AS":1,"CN":1,"CB":1,"CM":1,"CL":1,"CT":1,"EX":1,"GA":1,"IB":1,"RI":1,"MD":1,"MC":1,"NC":1,"PV":1,"VC":1,:0)
+		if 'code set ret=$$$ADDSC(ret,$$$ValError(error_"("_pCode_") no está en tabla ISO3166-2 ESP"))
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="TablaHL7">
+<Description>
+Comprobar que código en tabla definida en esquema HL7</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pCode:%String="",pTable:%String,pError:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError
+		set found=0
+		set code=""
+		for {
+			set code=$order(^EnsHL7.Description("WIFIS","CT",pTable,code))
+			quit:code=""
+			if code=pCode {
+				set found=1
+				quit
+			}
+		}
+		if 'found set ret=$$$ADDSC(ret,$$$ValError(error_"("_pCode_") no está en tabla "_pTable))		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="MSH">
+<Description>
+Segmento MSH</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pCode:%String="",pEvent:%String="",pStruc:%String="",pAppAck:%String,pError:%String="",pReq:%Boolean=1</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento MSH"))
+			quit
+		}
+		
+		// MSH.1
+		if pSeg.GetValueAt(1)'="|" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.1=|"))
+		// MSH.2
+		if pSeg.GetValueAt(2)'="^~\&" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.2=^~\&"))
+		// MSH.3
+		if pSeg.GetValueAt(3.1)="" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.3.1 informado"))
+		// MSH.4
+		set ret = $$$ADDSC(ret,..Centro(pSeg.GetValueAt(4.2), error_"MSH.4.2 "))
+		// MSH.5
+		if pSeg.GetValueAt(5.1)="" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.5.1 informado"))
+		// MSH.6
+		set ret = $$$ADDSC(ret,..Centro(pSeg.GetValueAt(6.2), error_"MSH.6.2 "))
+		// MSH.7
+		set ret = $$$ADDSC(ret,..FechaHora(pSeg.GetValueAt(7.1), error_"MSH.7.1"))
+		// MSH.9
+		if pCode'="",pSeg.GetValueAt(9.1)'=pCode set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.9.1="_pCode))
+		if pEvent'="",pSeg.GetValueAt(9.2)'=pEvent set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.9.2="_pEvent))
+		if pStruc'="",pSeg.GetValueAt(9.3)'=pStruc set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.9.3="_pStruc))
+		// MSH.10
+		if pSeg.GetValueAt(10)="" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.10 informado"))
+		// MSH.11
+		if pSeg.GetValueAt(11)'="P",'pSeg.GetValueAt(11)="D" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.11=[P,D]"))
+		// MSH.12
+		if pSeg.GetValueAt(12.1)'="2.5" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.12.1=2.5"))
+		// MSH.15
+		if pSeg.GetValueAt(15)'="AL" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.15=AL"))
+		// MSH.16
+		if pSeg.GetValueAt(16)'=pAppAck set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.16="_pAppAck))
+		// MSH.21
+		if pSeg.GetValueAt(21.1)'="WiFIS1.5.3" set ret=$$$ADDSC(ret,$$$ValError(error_"MSH.21.1=WiFIS1.5.3"))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="MSA">
+<Description>
+Segmento MSA</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pCode:%String="",pError:%String="",pReq:%Boolean=1</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento MSA"))
+			quit
+		}
+		
+		if pSeg.GetValueAt(1.1)'=pCode set ret=$$$ADDSC(ret,$$$ValError(error_"MSA.1.1="_pCode))
+		if pSeg.GetValueAt(2)="" set ret=$$$ADDSC(ret,$$$ValError(error_"MSA.2 informado"))
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="PID">
+<Description>
+Segmento PID</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento PID"))
+			quit
+		}
+		
+		// repeticiones PID.3
+		set rep=pSeg.GetValueAt("3(*)")
+		if ((rep<2)||(pSeg.GetValueAt("3(1)")="")) set ret=$$$ADDSC(ret,$$$ValError(error_"PID.3 >= 2 repeticiones"))
+		
+		// combinaciones valores en PID.3
+		kill combi
+		set combi=""
+		for i=1:1:rep {
+			set p="3("_i_")"
+			if pSeg.GetValueAt(p_".1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"PID."_p_".1 informado"))
+			
+			set f1=pSeg.GetValueAt(p_".4.1")
+			set f2=pSeg.GetValueAt(p_".5")
+			set f3=pSeg.GetValueAt(p_".9.1")
+			set f4=pSeg.GetValueAt(p_".9.3")
+			
+			kill m
+			set m = ""
+			set m(1)=((f1="HIS")&&(f2="PI")&&($$$ISOK(..Centro(f3)))&&(f4="99CEN"))
+			set m(2)=((f1="IDUSUARI")&&(f2="PN")&&($$$ISOK(..Centro(f3)))&&(f4="99CEN"))
+			set m(3)=((f1="CODICLIENT")&&(f2="PN")&&($$$ISOK(..Centro(f3)))&&(f4="99CEN"))
+			set m(4)=(("CA"=$e(f1,1,2))&&(..ISO31662ESP($e(f1,3,4)))&&(f2="JHN")&&(f3=$e(f1,3,4))&&(f4="ISO3166-2"))
+			set m(5)=((f1="MI")&&(f2="NNESP")&&(f3="ESP")&&(f4="ISO3166"))
+			set m(6)=((f1="MI")&&(f2="PPN")&&(f3="ESP")&&(f4="ISO3166"))
+			set m(7)=((f1="MI")&&(f2="PRC")&&(f3="ESP")&&(f4="ISO3166"))
+			set m(8)=((f1="SS")&&(f2="SS")&&(f3="ESP")&&(f4="ISO3166"))
+			
+			if 'm(1),'m(2),'m(3),'m(4),'m(5),'m(6),'m(7),'m(8) set ret=$$$ADDSC(ret,$$$ValError(error_"valores para subcampos de PID."_p_": 4.1,5,9.1,9.3"))
+			
+			// comprobar que no hay combinaciones repetidas
+			for j=1:1:8 {
+				if m(j) {
+					if $data(combi(j)) set ret=$$$ADDSC(ret,$$$ValError(error_"repetido PID."_p_"[combinacion="_j_"]"))
+					set combi(j)=1
+				}
+			}
+		}
+		
+		if pSeg.GetValueAt("5.1.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"PID.5.1.1 informado"))
+		if pSeg.GetValueAt("5.2")="" set ret=$$$ADDSC(ret,$$$ValError(error_"PID.5.2 informado"))
+		set ret = $$$ADDSC(ret,..FechaHora(pSeg.GetValueAt(7.1), error_"PID.7.1"))
+		
+		if pSeg.GetValueAt("8")'="M",pSeg.GetValueAt("8")'="F" set ret=$$$ADDSC(ret,$$$ValError(error_"PID.8=[M,F]"))
+		
+		// PID.11
+		set rep=pSeg.GetValueAt("11(*)")
+		// si al menos una repetición 
+		if rep>=1,pSeg.GetValueAt("11(1)")'="" {
+			// combinaciones valores PID.11
+			kill combi
+			set combi=""
+			for i=1:1:rep {
+				set p="11("_i_")"
+				
+				set f1=pSeg.GetValueAt(p_".7")
+				
+				kill m
+				set m=""
+				set m(1)=(f1="H")
+				set m(2)=(f1="M")
+				set m(3)=(f1="C")
+				
+				if 'm(1),'m(2),'m(3) set ret=$$$ADDSC(ret,$$$ValError(error_"PID."_p_".7=[H,M,C]"))
+				
+				// comprobar que no hay combinaciones repetidas
+				for j=1:1:3 {
+					if m(j) {
+						if $data(combi(j)) set ret=$$$ADDSC(ret,$$$ValError(error_"repetido PID."_p))
+						set combi(j)=1
+					}
+				}
+			}
+		}
+		
+		// PID.13
+		set rep=pSeg.GetValueAt("13(*)")
+		for i=1:1:rep {
+			set p="13("_i_")"
+			
+			set f1=pSeg.GetValueAt(p_".2")
+			set f2=pSeg.GetValueAt(p_".3")
+			set f3=pSeg.GetValueAt(p_".4")
+			set f4=pSeg.GetValueAt(p_".7")
+			
+			kill m
+			set m=""
+			set m(1)=((f1="NET")&&(f2="Internet")&&(..Email(f3))&&(f4=""))
+			set m(2)=((f1="PRN")&&(f2="PH")&&(f3="")&&(f4'=""))
+			set m(3)=((f1="PRS")&&(f2="CP")&&(f3="")&&(f4'=""))
+		
+			if 'm(1),'m(2),'m(3) set ret=$$$ADDSC(ret,$$$ValError(error_"valores para subcampos de PID."_p_": 2,3,4,7"))
+		}
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="PV1">
+<Description>
+Segmento PV1</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento PV1"))
+			quit
+		}
+		
+		set val=pSeg.GetValueAt("2")
+		if val'="I",val'="O",val'="E" set ret=$$$ADDSC(ret,$$$ValError(error_"PV1.2=[I,O,E]"))
+		
+		if val="I",pSeg.GetValueAt("7.2.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"PV1.7.2.1 informado"))
+		if val="I",pSeg.GetValueAt("7.3")="" set ret=$$$ADDSC(ret,$$$ValError(error_"PV1.7.3 informado"))
+		
+		set val=pSeg.GetValueAt("42")
+		if val'="" set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("42.4.2"),error_"PV1.42.4.2 "))
+		if val'="",pSeg.GetValueAt("42.4.3")'="L",pSeg.GetValueAt("42.4.3")'="M" set ret=$$$ADDSC(ret,$$$ValError(error_"PV1.42.4.3=[L,M]"))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="GT1">
+<Description>
+Segmento GT1</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="AL1">
+<Description>
+Segmento AL1</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="ORC">
+<Description>
+Segmento ORC</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="TQ1">
+<Description>
+Segmento TQ1</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="OBR">
+<Description>
+Segmento OBR</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="SCH">
+<Description>
+Segmento SCH</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="OBX">
+<Description>
+Segmento OBX</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="AIS">
+<Description>
+Segmento AIS</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+
+<Method name="AIL">
+<Description>
+Segmento AIL</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[	quit $$$ERROR($$$NotImplemented)
+]]></Implementation>
+</Method>
+</Class>
+</Export>

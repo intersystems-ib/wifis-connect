@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V20.Test.BP.CrearMsg">
+<Description>
+Ejemplo de Business Process que recibe un HL7 ER7, lo convierte a XML y lo empaqueta en un WiFIS.Msg.GenericReq para enviarlo al enrutador WiFIS.</Description>
+<Super>Ens.BusinessProcessBPL</Super>
+<TimeCreated>63337,36726.280083</TimeCreated>
+
+<XData name="BPL">
+<Description>
+BPL Definition</Description>
+<XMLNamespace>http://www.intersystems.com/bpl</XMLNamespace>
+<Data><![CDATA[
+<process language='objectscript' request='EnsLib.HL7.Message' response='Ens.Response' height='2000' width='2000' >
+<context>
+<property name='GenericReq' type='WiFIS.V20.Msg.GenericReq' instantiate='0' >
+</property>
+</context>
+<sequence xend='200' yend='450' >
+<transform name='HL7 2 XML' class='WiFIS.V20.DT.HL72XML' source='request' target='context.GenericReq' xpos='200' ypos='250' >
+<annotation><![CDATA[Transformar HL7 de ER7 a XML
+y crear un WiFIS.V20.Msg.GenericReq]]]]><![CDATA[></annotation>
+</transform>
+<call name='WiFIS Router' target='WiFIS_Router_V20' async='1' xpos='200' ypos='350' >
+<annotation><![CDATA[Enviar GenericReq a enrutador WiFIS para que lo envíe donde corresponde]]]]><![CDATA[></annotation>
+<request type='WiFIS.V20.Msg.GenericReq' >
+<assign property="callrequest" value="context.GenericReq" action="set" />
+</request>
+<response type='Ens.Response' />
+</call>
+</sequence>
+</process>
+]]></Data>
+</XData>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V20/Test/BP/CrearMsg.xml#1 $</Default>
+</Parameter>
+
+<Storage name="Default">
+<Type>%Library.CacheStorage</Type>
+</Storage>
+</Class>
+</Export>

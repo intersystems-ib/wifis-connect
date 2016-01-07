@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V153.Val.Derivacions.NotificarResultats">
+<Super>WiFIS.V153.Val.General</Super>
+<TimeCreated>63504,75249.74931</TimeCreated>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id$</Default>
+</Parameter>
+
+<Method name="Validar">
+<Description>
+Validar un mensaje HL7</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pMsg:EnsLib.HL7.Message</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error = ""
+		
+		set ret = $$$ADDSC(ret,..MSH(pMsg.FindSegment("MSH"),"ORU","R01","ORU_R01","AL",error))
+		set ret = $$$ADDSC(ret, ..ORC(pMsg.FindSegment("ORC"),error))
+		set ret = $$$ADDSC(ret, ..OBR(pMsg.FindSegment("OBR"),error))
+		set ret = $$$ADDSC(ret, ..OBX(pMsg.FindSegment("OBX"),error))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret, ex.AsStatus())
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="ORC">
+<Description>
+Segmento ORC</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento ORC"))
+			quit
+		}
+		
+		// ORC.1
+		if pSeg.GetValueAt("1")'="SC" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.1=SC"))
+		
+		// ORC.2
+		if pSeg.GetValueAt("2.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.2.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("2.2"),error_"ORC.2.2 "))
+		
+		// ORC.3
+		if pSeg.GetValueAt("3.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.3.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("3.2"),error_"ORC.3.2 "))
+		
+		// ORC.4
+		set val=pSeg.GetValueAt("4")
+		if val'="" set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("4.2"),error_"ORC.4.2 "))
+		
+		// ORC.5
+		if pSeg.GetValueAt("5")'="A" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.5=A"))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="OBR">
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento OBR"))
+			quit
+		}
+
+		// OBR.2
+		if pSeg.GetValueAt("2.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"OBR.2.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("2.2"),error_"OBR.2.2 "))
+		
+		// OBR.3
+		if pSeg.GetValueAt("3.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"OBR.3.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("3.2"),error_"OBR.3.2 "))
+		
+		// OBR.4.3
+		set val=pSeg.GetValueAt("4.3")
+		if val'="SERAM",val'="SEM",val'="LN",val'="SCT" set ret=$$$ADDSC(ret,$$$ValError(error_"OBR.4.3=[SERAM,SEM,LN,SCT]"))
+		
+		// OBR.25
+		if pSeg.GetValueAt("25")'="F" set ret=$$$ADDSC(ret,$$$ValError(error_"OBR.25=F"))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="OBX">
+<Description>
+Segmento OBX</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento OBX"))
+			quit
+		}
+
+		// OBX.2
+		set val=pSeg.GetValueAt("2")
+		if val'="ED",val'="RP",val'="NM",val'="ST" set ret=$$$ADDSC(ret,$$$ValError(error_"OBX.2=[ED,RP,NM,ST]"))
+		
+		// OBX.3
+		if pSeg.GetValueAt("3.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"OBX.3.1 informado"))
+		if pSeg.GetValueAt("3.3")'="SCT",pSeg.GetValueAt("3.3")'="DCM" set ret=$$$ADDSC(ret,$$$ValError(error_"OBX.3.3=[SCT,DCM]"))
+		
+		// OBX.11
+		if pSeg.GetValueAt("11")'="F",pSeg.GetValueAt("11")'="C" set ret=$$$ADDSC(ret,$$$ValError(error_"OBX.11=[F,C]"))
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}	
+	quit ret
+]]></Implementation>
+</Method>
+</Class>
+</Export>

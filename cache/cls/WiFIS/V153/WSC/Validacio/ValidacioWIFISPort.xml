@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V153.WSC.Validacio.ValidacioWIFISPort">
+<ProcedureBlock>1</ProcedureBlock>
+<Super>%SOAP.WebClient</Super>
+<TimeCreated>63505,43289.060752</TimeCreated>
+
+<Method name="ConfirmarAccio">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("ConfirmarAccio").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Method name="DemanarCancelacio">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("DemanarCancelacio").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Method name="DemanarNova">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("DemanarNova").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarFinalitzacio">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarFinalitzacio").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarProgramacio">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarProgramacio").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarRealitzacio">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarRealitzacio").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarResultats">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarResultats").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Method name="RespondreNova">
+<Final>1</Final>
+<FormalSpec>MissatgeWIFIS:%String</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>%String</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="return"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("RespondreNova").Invoke($this,"",.MissatgeWIFIS)
+]]></Implementation>
+</Method>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Description>
+Non-default elementFormQualified for types XML namespace.</Description>
+<Default>0</Default>
+</Parameter>
+
+<Parameter name="LOCATION">
+<Description>
+This is the URL used to access the web service.</Description>
+<Default>http://147.83.244.67:8082/services/WIFIS_SW</Default>
+</Parameter>
+
+<Parameter name="NAMESPACE">
+<Description>
+This is the namespace used by the Service</Description>
+<Default>http://pdm.isalut.gencat.net/sw</Default>
+</Parameter>
+
+<Parameter name="OUTPUTTYPEATTRIBUTE">
+<Description>
+Use xsi:type attribute for literal types.</Description>
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="SECURITYIN">
+<Description>
+Determines handling of Security header.</Description>
+<Default>ALLOW</Default>
+</Parameter>
+
+<Parameter name="SERVICENAME">
+<Description>
+This is the name of the Service</Description>
+<Default>ValidacioWIFIS</Default>
+</Parameter>
+
+<Parameter name="SOAPVERSION">
+<Description>
+This is the SOAP version supported by the service.</Description>
+<Default>1.1</Default>
+</Parameter>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id$</Default>
+</Parameter>
+</Class>
+</Export>
