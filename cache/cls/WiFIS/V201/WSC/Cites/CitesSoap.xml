@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V201.WSC.Cites.CitesSoap">
+<ProcedureBlock>1</ProcedureBlock>
+<Super>%SOAP.WebClient</Super>
+<TimeCreated>63871,62869.428664</TimeCreated>
+
+<Method name="ConfirmarAccio">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="AplicacioConfirmacioResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("ConfirmarAccio","AplicacioConfirmacio").Invoke($this,"http://pdm.isalut.gencat.net/Cites/ConfirmarAccio",.any)
+]]></Implementation>
+</Method>
+
+<Method name="DemanarDisponibilitat">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaPeticioDisponibilitatResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("DemanarDisponibilitat","CitaPeticioDisponibilitat").Invoke($this,"http://pdm.isalut.gencat.net/Cites/DemanarDisponibilitat",.any)
+]]></Implementation>
+</Method>
+
+<Method name="DemanarNova">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaPeticioNovaResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("DemanarNova","CitaPeticioNova").Invoke($this,"http://pdm.isalut.gencat.net/Cites/DemanarNova",.any)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarCancelacio">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaNotificacioCancelacioResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarCancelacio","CitaNotificacioCancelacio").Invoke($this,"http://pdm.isalut.gencat.net/Cites/NotificarCancelacio",.any)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarNoPresentacio">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaNotificacioNoPresentacioResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarNoPresentacio","CitaNotificacioNoPresentacio").Invoke($this,"http://pdm.isalut.gencat.net/Cites/NotificarNoPresentacio",.any)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarProgramacio">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaNotificacioProgramacioResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarProgramacio","CitaNotificacioProgramacio").Invoke($this,"http://pdm.isalut.gencat.net/Cites/NotificarProgramacio",.any)
+]]></Implementation>
+</Method>
+
+<Method name="NotificarReprogramacio">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaNotificacioReprogramacioResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("NotificarReprogramacio","CitaNotificacioReprogramacio").Invoke($this,"http://pdm.isalut.gencat.net/Cites/NotificarReprogramacio",.any)
+]]></Implementation>
+</Method>
+
+<Method name="RespondreDisponibilitat">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaPeticioDisponibilitatResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("RespondreDisponibilitat","CitaRespostaDisponibilitat").Invoke($this,"http://pdm.isalut.gencat.net/Cites/RespondreDisponibilitat",.any)
+]]></Implementation>
+</Method>
+
+<Method name="RespondreNova">
+<Final>1</Final>
+<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<ProcedureBlock>1</ProcedureBlock>
+<ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
+<WebMethod>1</WebMethod>
+<SoapBindingStyle>document</SoapBindingStyle>
+<SoapBodyUse>literal</SoapBodyUse>
+<ReturnTypeParams>XMLNAME="CitaRespostaNovaResponseResult"</ReturnTypeParams>
+<Implementation><![CDATA[ Quit ..WebMethod("RespondreNova","CitaRespostaNova").Invoke($this,"http://pdm.isalut.gencat.net/Cites/RespondreNova",.any)
+]]></Implementation>
+</Method>
+
+<Parameter name="LOCATION">
+<Description>
+This is the URL used to access the web service.</Description>
+<Default>http://localhost/WiFISIntegration/services/Cites.asmx</Default>
+</Parameter>
+
+<Parameter name="NAMESPACE">
+<Description>
+This is the namespace used by the Service</Description>
+<Default>http://tempuri.org/</Default>
+</Parameter>
+
+<Parameter name="OUTPUTTYPEATTRIBUTE">
+<Description>
+Use xsi:type attribute for literal types.</Description>
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="SECURITYIN">
+<Description>
+Determines handling of Security header.</Description>
+<Default>ALLOW</Default>
+</Parameter>
+
+<Parameter name="SERVICENAME">
+<Description>
+This is the name of the Service</Description>
+<Default>Cites</Default>
+</Parameter>
+
+<Parameter name="SOAPVERSION">
+<Description>
+This is the SOAP version supported by the service.</Description>
+<Default>1.1</Default>
+</Parameter>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V201/WSC/Cites/CitesSoap.xml#2 $</Default>
+</Parameter>
+
+<Parameter name="TYPENAMESPACE">
+<Description>
+This is the namespace used for types by the Service</Description>
+<Default>http://pdm.isalut.gencat.net/Cites</Default>
+</Parameter>
+</Class>
+</Export>

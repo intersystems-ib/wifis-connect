@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V153.Val.Derivacions.NotificarFinalitzacio">
+<Super>WiFIS.V153.Val.General</Super>
+<TimeCreated>63504,75249.74931</TimeCreated>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id$</Default>
+</Parameter>
+
+<Method name="Validar">
+<Description>
+Validar un mensaje HL7</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pMsg:EnsLib.HL7.Message</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error = ""
+		
+		set ret = $$$ADDSC(ret,..MSH(pMsg.FindSegment("MSH"),"OMG","O19","OMG_O19","AL",error))
+		set ret = $$$ADDSC(ret, ..PID(pMsg.FindSegment("PID"),error))
+		set ret = $$$ADDSC(ret, ..ORC(pMsg.FindSegment("ORC"),error))
+		set ret = $$$ADDSC(ret, ..OBR(pMsg.FindSegment("OBR"),error))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret, ex.AsStatus())
+	}
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="ORC">
+<Description>
+Segmento ORC</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento ORC"))
+			quit
+		}
+
+		// ORC.1
+		if pSeg.GetValueAt("1")'="SC" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.1=SC"))
+		// ORC.2
+		if pSeg.GetValueAt("2.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.2.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("2.2"),error_"ORC.2.2 "))
+		// ORC.3
+		if pSeg.GetValueAt("3.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.3.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("3.2"),error_"ORC.3.2 "))
+		// ORC.4
+		set val=pSeg.GetValueAt("4")
+		if val'="",pSeg.GetValueAt("4.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.4.1 informado"))
+		if val'="" set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("4.2"),error_"ORC.4.2 "))
+		
+		// ORC.5
+		if pSeg.GetValueAt("5")'="CM" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.5=CM"))
+		// ORC.6
+		if pSeg.GetValueAt("6")'="F" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.6=F"))
+		// ORC.9
+		set ret=$$$ADDSC(ret,..FechaHora(pSeg.GetValueAt("9"), error_"ORC.9"))
+		// ORC.21
+		if pSeg.GetValueAt("21.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"ORC.21.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("21.10"),error_"ORC.21.10 "))
+		
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+
+<Method name="OBR">
+<Description>
+Segmento OBR</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pSeg:EnsLib.HL7.Segment,pError:%String="",pReq:%Boolean=1,pIndex:%String=""</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		set error=pError_"no cumple "
+		
+		if '$isobject(pSeg) {
+			if pReq set ret=$$$ADDSC(ret,$$$ValError(error_"No existe segmento OBR"))
+			quit
+		}
+
+		// OBR.2
+		if pSeg.GetValueAt("2.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"OBR.2.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("2.2"),error_"OBR.2.2 "))
+		
+		// OBR.3
+		if pSeg.GetValueAt("3.1")="" set ret=$$$ADDSC(ret,$$$ValError(error_"OBR.3.1 informado"))
+		set ret=$$$ADDSC(ret,..Centro(pSeg.GetValueAt("3.2"),error_"OBR.3.2 "))
+		
+		// OBR.4.3
+		set val=pSeg.GetValueAt("4.3")
+		if val'="SERAM",val'="SEM",val'="LN",val'="SCT" set ret=$$$ADDSC(ret,$$$ValError(error_"OBR.4.3=[SERAM,SEM,LN,SCT]"))
+				
+	} catch ex {
+		set ret = $$$ADDSC(ret,ex.AsStatus())
+	}
+	
+	quit ret
+]]></Implementation>
+</Method>
+</Class>
+</Export>

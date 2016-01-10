@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.V153.BO.ValidacioPort">
+<Description>
+Clase de Business Operation (SOAP) genérico para cliente webservice Validació WiFIS.</Description>
+<ProcedureBlock>1</ProcedureBlock>
+<Super>Ens.BusinessOperation</Super>
+<TimeCreated>62251,46827.954728</TimeCreated>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id$</Default>
+</Parameter>
+
+<Parameter name="ADAPTER">
+<Default>EnsLib.SOAP.OutboundAdapter</Default>
+</Parameter>
+
+<Method name="OnMessage">
+<Description>
+This is the default message handler.  All request types not declared in the message map are delivered here</Description>
+<FormalSpec>pReq:WiFIS.V153.Msg.GenericReq,*pResp:Ens.StringContainer</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	#dim tSC as %Status=$$$OK
+	#dim errObj as %Exception.AbstractException
+	#dim tResult as Ens.StringContainer
+	#dim tXML=""
+	
+	try {
+		$$$TRACE("OnMessage: Tipo="_pReq.Tipo_", URL="_pReq.URL)
+		if pReq.URL'="" {
+			set ..Adapter.WebServiceURL=pReq.URL
+		}
+		$$$TRACE("URL utilizada: "_..Adapter.WebServiceURL)
+		
+		do pReq.DatosXML.Rewind()
+ 		while('pReq.DatosXML.AtEnd) {
+ 			set tXML=tXML_pReq.DatosXML.Read()
+ 		}
+ 		
+ 		// llamar cliente webservice
+ 		set tFechaHoraOut = $zdt($h,3)
+ 		set tSC = ..Adapter.InvokeMethod(pReq.Tipo,.resp,tXML)
+ 		
+ 		set pResp = ##class(Ens.StringContainer).%New()
+ 		set pResp.StringValue = resp
+ 		
+ 		if $$$ISERR(tSC) $$$ThrowStatus(tSC)
+ 		
+	} catch (errObj) {
+		$$$TRACE("Error WiFIS BO")
+		set tSC=errObj.AsStatus()
+	}
+	quit tSC
+]]></Implementation>
+</Method>
+</Class>
+</Export>

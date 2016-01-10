@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="WiFIS.Stats.Messages">
+<Description>
+Recuento de mensajes WiFIS que han pasado por la plataforma</Description>
+<Super>%Persistent,%XML.Adaptor</Super>
+<TimeCreated>62592,47377.950783</TimeCreated>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id$</Default>
+</Parameter>
+
+<Property name="Tipo">
+<Description>
+Tipo (Entrada,Salida)</Description>
+<Type>%String</Type>
+<SqlColumnNumber>2</SqlColumnNumber>
+<Parameter name="DISPLAYLIST" value=",Entrada,Salida"/>
+<Parameter name="VALUELIST" value=",E,S"/>
+</Property>
+
+<Property name="Origen">
+<Description>
+El Origen del Mensaje, segun MSH:4</Description>
+<Type>%String</Type>
+<SqlColumnNumber>3</SqlColumnNumber>
+</Property>
+
+<Property name="Destino">
+<Description>
+El Destino del Mensaje, segun MSH:6</Description>
+<Type>%String</Type>
+<SqlColumnNumber>4</SqlColumnNumber>
+</Property>
+
+<Property name="Servicio">
+<Description>
+El Nombre del WebService llamado</Description>
+<Type>%String</Type>
+<SqlColumnNumber>5</SqlColumnNumber>
+</Property>
+
+<Property name="Metodo">
+<Description>
+El Nombre del metodo llamado</Description>
+<Type>%String</Type>
+<SqlColumnNumber>6</SqlColumnNumber>
+</Property>
+
+<Property name="FechaHoraIn">
+<Description>
+La Fecha y Hora de entrada del Mensaje</Description>
+<Type>%TimeStamp</Type>
+<SqlColumnNumber>7</SqlColumnNumber>
+</Property>
+
+<Property name="FechaHoraOut">
+<Description>
+La Fecha y Hora de Salida de la Respuesta Synchrona</Description>
+<Type>%TimeStamp</Type>
+<SqlColumnNumber>8</SqlColumnNumber>
+</Property>
+
+<Property name="Estado">
+<Description>
+El Estado del Mensaje</Description>
+<Type>%String</Type>
+<SqlColumnNumber>9</SqlColumnNumber>
+<Parameter name="MAXLEN" value="2048"/>
+<Parameter name="TRUNCATE" value="1"/>
+</Property>
+
+<Method name="LogMsg">
+<Description>
+Añade estadisticas a la tabla</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>pTipo:%String,pServiceName:%String="",pMethodName:%String="",pOrigen:%String="",pDestino:%String="",pEstado:%String="",pFechaHoraIn:%TimeStamp,pFechaHoraOut:%TimeStamp</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	#dim tSC as %Status=$$$OK
+	#dim errObj as %Exception.AbstractException
+	try {
+		#dim pStat as WiFIS.Stats.Messages=##class(WiFIS.Stats.Messages).%New()
+		set pStat.Tipo = pTipo
+		set pStat.Servicio=pServiceName
+		set pStat.Metodo=pMethodName
+		set pStat.Origen=pOrigen
+		set pStat.Destino=pDestino
+		set pStat.Estado=pEstado
+		set pStat.FechaHoraIn=pFechaHoraIn
+		set pStat.FechaHoraOut=pFechaHoraOut
+		$$$THROWONERROR(tSC,pStat.%Save())
+	}catch(errObj) {
+		set tSC=errObj.AsStatus()
+	}
+	quit tSC
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Library.CacheStorage</Type>
+<DataLocation>^WiFIS.Stats.MessagesD</DataLocation>
+<DefaultData>MessagesDefaultData</DefaultData>
+<IdLocation>^WiFIS.Stats.MessagesD</IdLocation>
+<IndexLocation>^WiFIS.Stats.MessagesI</IndexLocation>
+<StreamLocation>^WiFIS.Stats.MessagesS</StreamLocation>
+<ExtentSize>100000</ExtentSize>
+<Data name="MessagesDefaultData">
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+<Value name="2">
+<Value>FechaHora</Value>
+</Value>
+<Value name="3">
+<Value>Servicio</Value>
+</Value>
+<Value name="4">
+<Value>Metodo</Value>
+</Value>
+<Value name="5">
+<Value>Origen</Value>
+</Value>
+<Value name="6">
+<Value>Destino</Value>
+</Value>
+<Value name="7">
+<Value>Estado</Value>
+</Value>
+<Value name="8">
+<Value>FechaHoraIn</Value>
+</Value>
+<Value name="9">
+<Value>FechaHoraOut</Value>
+</Value>
+<Value name="10">
+<Value>Tipo</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>
