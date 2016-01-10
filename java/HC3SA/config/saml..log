@@ -1,0 +1,886 @@
+[16/Nov/2015 16:18:52] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[16/Nov/2015 16:18:52] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[16/Nov/2015 16:18:53] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[16/Nov/2015 16:18:53] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[16/Nov/2015 16:18:53] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[16/Nov/2015 16:18:53] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[16/Nov/2015 16:18:53] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[16/Nov/2015 16:18:53] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[16/Nov/2015 16:18:54] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[16/Nov/2015 16:38:02] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[16/Nov/2015 16:38:02] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[16/Nov/2015 16:38:03] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[16/Nov/2015 16:38:03] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[16/Nov/2015 16:38:03] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[16/Nov/2015 16:38:03] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[16/Nov/2015 16:38:03] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[16/Nov/2015 16:38:03] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[16/Nov/2015 16:38:04] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/Nov/2015 1:22:35] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/Nov/2015 1:22:35] [es.hccc.saml.HCCCSAML] [ERR] [000003] La ruta donde se van a almacenar las páginas HTML generadas es errónea
+[17/Nov/2015 1:22:35] [es.hccc.saml.HCCCSAML] [ERR] [000000] Error al inicializar el API HCCsa
+[17/Nov/2015 1:23:09] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/Nov/2015 1:23:09] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/Nov/2015 1:23:10] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/Nov/2015 1:23:10] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/Nov/2015 1:23:10] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/Nov/2015 1:23:10] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/Nov/2015 1:23:10] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/Nov/2015 1:23:10] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/Nov/2015 1:23:11] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/Nov/2015 1:24:11] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/Nov/2015 1:24:11] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/Nov/2015 1:24:12] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/Nov/2015 1:24:12] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/Nov/2015 1:24:12] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/Nov/2015 1:24:12] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/Nov/2015 1:24:12] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/Nov/2015 1:24:12] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/Nov/2015 1:38:21] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/Nov/2015 1:38:21] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/Nov/2015 1:38:21] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/Nov/2015 1:38:21] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/Nov/2015 1:38:21] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/Nov/2015 1:38:21] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/Nov/2015 1:38:21] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/Nov/2015 1:38:21] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/Nov/2015 1:38:22] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 2:45:56] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 2:45:56] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 2:45:57] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 2:45:57] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 2:45:57] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 2:45:57] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 2:45:57] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 2:45:57] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 2:45:58] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 2:50:24] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 2:50:24] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 2:50:24] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 2:50:24] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 2:50:24] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 2:50:24] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 2:50:24] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 2:50:24] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 2:50:25] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 2:50:38] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 2:50:38] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 2:50:39] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 8:35:05] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 8:35:05] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 8:35:06] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 8:38:53] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 8:38:53] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 8:38:53] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 8:38:53] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 8:38:53] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 8:38:53] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 8:38:53] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 8:38:53] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 8:38:54] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 8:40:56] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 8:40:56] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 8:40:56] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 8:40:56] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 8:40:56] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 8:40:56] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 8:40:56] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 8:40:56] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 8:40:57] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 9:31:26] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 9:31:26] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 9:31:27] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 9:35:41] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 9:35:41] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 9:35:42] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 9:39:36] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 9:39:36] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 9:48:06] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 9:48:06] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 9:48:07] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 9:55:52] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 9:55:52] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:04:17] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:04:17] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:07:40] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:07:40] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:07:40] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:07:40] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:07:41] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:07:41] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:07:41] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:07:41] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:07:41] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:09:25] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:09:25] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:09:26] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:09:30] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:09:30] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:12:23] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:12:23] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:12:24] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:15:09] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:15:09] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:15:10] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:22:19] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:22:19] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:22:20] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:27:32] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:27:32] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:27:32] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:27:32] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:27:33] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:27:33] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:27:33] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:27:33] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:27:33] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:28:09] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:28:09] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:28:10] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:28:10] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:28:10] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:28:10] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:28:10] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:28:10] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:28:11] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:32:02] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:32:02] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:32:03] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:35:43] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:35:43] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:35:43] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:35:43] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:35:43] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:35:43] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:35:43] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:35:43] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:35:43] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:35:43] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:35:43] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:35:43] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:35:43] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:35:43] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:35:44] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:35:44] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:45:17] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:45:17] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:46:37] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:46:37] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:51:08] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:51:08] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:51:09] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:53:48] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:53:48] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:53:49] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 10:54:48] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 10:54:48] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 10:54:49] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 11:00:21] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 11:00:21] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 11:00:22] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 11:04:12] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 11:04:12] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 11:04:12] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 11:04:12] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 11:04:12] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 11:04:12] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 11:04:12] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 11:04:12] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 11:04:13] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 11:21:03] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 11:21:03] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 11:21:03] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 11:21:03] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 11:21:03] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 11:21:03] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 11:21:03] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 11:21:03] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 11:21:04] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 11:32:41] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 11:32:41] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 11:32:42] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 11:32:42] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 11:32:42] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 11:32:42] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 11:32:42] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 11:32:42] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 11:36:54] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 11:36:54] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 11:36:54] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 11:36:54] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 11:36:55] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 11:36:55] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 11:36:55] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 11:36:55] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 11:36:55] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 11:42:06] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 11:42:06] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 11:42:07] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 11:42:07] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 11:42:07] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 11:42:07] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 11:42:07] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 11:42:07] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 13:30:44] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 13:30:44] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 13:30:44] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 13:30:44] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 13:30:44] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 13:30:44] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 13:30:44] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 13:30:44] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 13:30:45] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/nov/2015 18:38:28] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/nov/2015 18:38:28] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/nov/2015 18:38:28] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/nov/2015 18:38:28] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/nov/2015 18:38:29] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/nov/2015 18:38:29] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/nov/2015 18:38:29] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/nov/2015 18:38:29] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/nov/2015 18:38:29] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[17/Nov/2015 18:39:50] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[17/Nov/2015 18:39:50] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[17/Nov/2015 18:39:50] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[17/Nov/2015 18:39:51] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[17/Nov/2015 18:39:51] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[17/Nov/2015 18:39:51] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[17/Nov/2015 18:39:51] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[17/Nov/2015 18:39:51] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[18/nov/2015 11:28:42] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[18/nov/2015 11:28:42] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[18/nov/2015 11:28:42] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[18/nov/2015 11:28:42] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[18/nov/2015 11:28:42] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[18/nov/2015 11:28:42] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[18/nov/2015 11:28:42] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[18/nov/2015 11:28:42] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[18/nov/2015 11:28:43] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[18/Nov/2015 17:23:16] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[18/Nov/2015 17:23:16] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[18/Nov/2015 17:23:17] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[18/Nov/2015 17:23:17] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[18/Nov/2015 17:23:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[18/Nov/2015 17:23:17] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[18/Nov/2015 17:23:17] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[18/Nov/2015 17:23:17] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[02/dic/2015 11:40:31] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[02/dic/2015 11:40:31] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[02/dic/2015 11:40:32] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[02/dic/2015 11:40:32] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[02/dic/2015 11:40:32] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[02/dic/2015 11:40:32] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[02/dic/2015 11:40:32] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[02/dic/2015 11:40:32] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] HCCCX509 INVOCADO
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] rutaMagatzem=C:\Test\HC3SA\cert\test.p12
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] passwordMagatzem=test
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Numero de serie: 12730715526803385340
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Dn: EMAILADDRESS=test@test.com, CN=Test, OU=Test, O=Test, L=Barcelona, ST=Barcelona, C=ES
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[02/dic/2015 11:40:33] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[02/dic/2015 11:40:33] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.
+[10/Jan/2016 18:22:31] [es.hccc.saml.HCCCSAML] [INF] Log inicializado.
+[10/Jan/2016 18:22:31] [es.hccc.saml.HCCCSAML] [INF] Propiedades obtenidas correctamente.
+[10/Jan/2016 18:22:32] [es.hccc.saml.HCCCSAML] [INF] API INICIALIZADA
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se crea la aserciÃ³n.
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el emisor a la aserciÃ³n.
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se aÃ±ade el NameId a la aserciÃ³n.
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se establecen las condiciones.
+[10/Jan/2016 18:22:32] [es.hccc.saml.HCCCX509] [DEB] Alias: 1
+[10/Jan/2016 18:22:32] [es.hccc.saml.HCCCX509] [DEB] Numero de serie cert: b0ac965247aa6bfc
+[10/Jan/2016 18:22:32] [es.hccc.saml.HCCCX509] [DEB] Numero de serie prop: b0ac965247aa6bfc
+[10/Jan/2016 18:22:32] [es.hccc.saml.HCCCX509] [DEB] Tipo: X.509
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se establece el reference.
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se establece el KeyInfo.
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se establece el Signature.
+[10/Jan/2016 18:22:32] [HCCCSAML.getSAML()] [DEB] Se ordena la aserciÃ³n.
+[10/Jan/2016 18:22:33] [HCCCSAML.getSAML()] [DEB] Se firma la aserciÃ³n.

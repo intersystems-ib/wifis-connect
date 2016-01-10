@@ -258,26 +258,45 @@ Override it to be able to return an abitrary WSDL if needed</Description>
 		#; If it's a WSDL Request, just generate the WSDL for the client
 		#dim tSvc
 		#dim tSC as %Status
-		set tSC=##class(Ens.Director).CreateBusinessService(..%ClassName(1),.tSvc)
+		set tSC = ##class(Ens.Director).CreateBusinessService(..%ClassName(1),.tSvc)
 		if ($$$ISOK(tSC)) {
 			if (tSvc.WSDLFile="") {
-				// implementación original
-				quit ##class(%XML.Implementation).GenerateWSDL(..%ClassName(1))
+				quit ..GenerateStandardWDSL()
 			} else {
 				set tFile=##class(%Stream.FileBinary).%New()
 				set tFile.Filename=tSvc.WSDLFile
 				while (tFile.AtEnd=0) {
 					write tFile.Read()
 				}
-				
 			}		
 		} else {
-			quit ##class(%XML.Implementation).GenerateWSDL(..%ClassName(1))
+			quit ..GenerateStandardWDSL()
 		}
 	} else {
 		do ##super()
 	}
 	quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="GenerateStandardWDSL">
+<Description>
+Genera documento WSDL estándar para el Business Service</Description>
+<ClassMethod>1</ClassMethod>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set ret = $$$OK
+	try {
+		if $system.Version.GetMajor() <= 2014 {
+			$$$ThrowOnError(##class(%XML.Implementation).GenerateWSDL(..%ClassName(1)))
+		} else {
+			// segundo parámetro necesario a partir de 2015
+			$$$ThrowOnError(##class(%XML.Implementation).GenerateWSDL(..%ClassName(1), 1))
+		}
+	} catch ex {
+		set ret = ex.AsStatus()
+	}
+	quit ret
 ]]></Implementation>
 </Method>
 </Class>
