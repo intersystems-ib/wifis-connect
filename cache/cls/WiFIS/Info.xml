@@ -46,7 +46,7 @@ Location and Revision of this file in Perforce (Auto-updating)</Description>
 </Parameter>
 
 <Parameter name="PORTING">
-<Default>2014</Default>
+<Default>2013</Default>
 </Parameter>
 
 <Parameter name="ITBMINVERSION">
