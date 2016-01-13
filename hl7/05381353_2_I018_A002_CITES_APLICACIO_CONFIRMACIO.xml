@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ACK>
+	<MSH>
+		<MSH.1>|</MSH.1>
+		<MSH.2>^~\&amp;</MSH.2>
+		<MSH.3>
+			<HD.1>CSI</HD.1>
+			<HD.2>#Cites#ConfirmarAccio</HD.2>
+		</MSH.3>
+		<MSH.4>
+			<HD.1>00268</HD.1>
+			<HD.2>2.16.840.1.113883.4.292.10.12.6</HD.2>
+			<HD.3>ISO</HD.3>
+		</MSH.4>
+		<MSH.5>
+			<HD.1>SAP</HD.1>
+		</MSH.5>
+		<MSH.6>
+			<HD.1>00148</HD.1>
+			<HD.2>2.16.840.1.113883.4.292.10.12.6</HD.2>
+			<HD.3>ISO</HD.3>
+		</MSH.6>
+		<MSH.7>
+			<TS.1>20151014173245</TS.1>
+		</MSH.7>
+		<MSH.9>
+			<MSG.1>ACK</MSG.1>
+			<MSG.2>S12</MSG.2>
+		</MSH.9>
+		<MSH.10>00000000000000000250</MSH.10>
+		<MSH.11>
+			<PT.1>P</PT.1>
+		</MSH.11>
+		<MSH.12>2.3.1</MSH.12>
+		<MSH.15>AL</MSH.15>
+		<MSH.16>AL</MSH.16>
+		<MSH.21>
+			<EI.1>WiFIS2.0.1</EI.1>
+		</MSH.21>
+	</MSH>
+	<MSA>
+		<MSA.1>AA</MSA.1>
+		<MSA.2>00000000000046996839</MSA.2>
+	</MSA>
+</ACK>
