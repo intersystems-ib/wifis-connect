@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OMG_O19>
+	<MSH>
+		<MSH.1>|</MSH.1>
+		<MSH.2>^~\&amp;</MSH.2>
+		<MSH.3>
+			<HD.1>SAP</HD.1>
+			<HD.2>#Notificacions#NotificacioRealitzacio</HD.2>
+		</MSH.3>
+		<MSH.4>
+			<HD.1>00246</HD.1>
+			<HD.2>2.16.840.1.113883.4.292.10.12.6</HD.2>
+			<HD.3>ISO</HD.3>
+		</MSH.4>
+		<MSH.5>
+			<HD.1>CSI</HD.1>
+		</MSH.5>
+		<MSH.6>
+			<HD.1>00268</HD.1>
+			<HD.2>2.16.840.1.113883.4.292.10.12.6</HD.2>
+			<HD.3>ISO</HD.3>
+		</MSH.6>
+		<MSH.7>
+			<TS.1>20151001183525</TS.1>
+		</MSH.7>
+		<MSH.9>
+			<MSG.1>OMG</MSG.1>
+			<MSG.2>O19</MSG.2>
+			<MSG.3>OMG_O19</MSG.3>
+		</MSH.9>
+		<MSH.10>46996568</MSH.10>
+		<MSH.11>
+			<PT.1>D</PT.1>
+		</MSH.11>
+		<MSH.12>
+			<VID.1>2.5</VID.1>
+		</MSH.12>
+		<MSH.15>AL</MSH.15>
+		<MSH.16>AL</MSH.16>
+		<MSH.21>
+			<EI.1>WiFIS2.0.1</EI.1>
+		</MSH.21>
+	</MSH>
+	<OMG_O19.PATIENT>
+		<PID>
+			<PID.1>1</PID.1>
+			<PID.3>
+				<CX.1>0013537087</CX.1>
+				<CX.4>
+					<HD.1>HIS</HD.1>
+				</CX.4>
+				<CX.5>PI</CX.5>
+			</PID.3>
+			<PID.3>
+				<CX.1>NOCO0280700000</CX.1>
+				<CX.4>
+					<HD.1>ES-CT</HD.1>
+				</CX.4>
+				<CX.5>JHN</CX.5>
+			</PID.3>
+			<PID.3>
+				<CX.1>36785000K</CX.1>
+				<CX.4>
+					<HD.1>MI</HD.1>
+				</CX.4>
+				<CX.5>NNESP</CX.5>
+			</PID.3>
+			<PID.3>
+				<CX.1>080149125301</CX.1>
+				<CX.4>
+					<HD.1>SS</HD.1>
+				</CX.4>
+				<CX.5>SS</CX.5>
+			</PID.3>
+			<PID.5>
+				<XPN.1>
+					<FN.1>COGNOM1</FN.1>
+				</XPN.1>
+				<XPN.2>NOM</XPN.2>
+			</PID.5>
+			<PID.6>
+				<XPN.1>
+					<FN.1>COGNOM2</FN.1>
+				</XPN.1>
+			</PID.6>
+			<PID.7>
+				<TS.1>19280726</TS.1>
+			</PID.7>
+			<PID.8>H</PID.8>
+			<PID.11>
+				<XAD.1>
+					<SAD.2>Adreça del pacient</SAD.2>
+				</XAD.1>
+				<XAD.3>Pobl. pacient</XAD.3>
+				<XAD.5>08940</XAD.5>
+			</PID.11>
+			<PID.13>
+				<XTN.2>PRS</XTN.2>
+				<XTN.3>CP</XTN.3>
+				<XTN.7>10013537087</XTN.7>
+			</PID.13>
+			<PID.23> &lt;saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_6237f4da42475beadfb10be44df9d33f" IssueInstant="2015-10-01T16:35:31.525Z" Version="2.0"&gt;&lt;saml:Issuer&gt;HCC -&lt;/saml:Issuer&gt;&lt;ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+&lt;ds:SignedInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+&lt;ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/&gt;
+&lt;ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/&gt;
+&lt;ds:Reference URI="#_6237f4da42475beadfb10be44df9d33f" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+&lt;ds:Transforms xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+&lt;ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/&gt;
+&lt;ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#WithComments" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;&lt;ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="ds saml xs"/&gt;&lt;/ds:Transform&gt;
+&lt;/ds:Transforms&gt;
+&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/&gt;
+&lt;ds:DigestValue xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;gGVJQWCIE1N3zlopp10muDC6mlE=&lt;/ds:DigestValue&gt;
+&lt;/ds:Reference&gt;
+&lt;/ds:SignedInfo&gt;
+&lt;ds:SignatureValue xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+fMMX0p8R998MqgMOiXBPKVYpQNVOJmraCYKXdC7Dt+fcpE9BjdzvtNoOhX6QRr2KJv7cXCp1ppwX
+ALZLSWgmBdsp2pmYirSZLEv+KgWaefKaejBcZ1MsCuKXi7PfpJwdZ6KjOWY28bq+Hcy2xM0uiiQR
+laQkbC9bl4AvbjJ9Uc/TqaYMIrdgV/j2tgIqTzo3ncld/XlMuQj2Tgm4RppKz5dBAVGGsU+GizHU
+iOZXoiEsuCYxQtMOMQmnf4C6uOb3pQXw5ldJXqqVA91RwFTUJB3p0oiuYoQ7veJxLhFXYBFH6htI
+dfh8WZZ+isHwrB96osrnN5US35Vnf6IMKu+LnQ==
+&lt;/ds:SignatureValue&gt;
+&lt;ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+&lt;ds:X509Data xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+&lt;ds:X509Certificate xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+MIIHCjCCBfKgAwIBAgIQXwjeTaUsxCNQ8ATeiHd65DANBgkqhkiG9w0BAQUFADCCATExCzAJBgNV
+BAYTAkVTMTswOQYDVQQKEzJBZ2VuY2lhIENhdGFsYW5hIGRlIENlcnRpZmljYWNpbyAoTklGIFEt
+MDgwMTE3Ni1JKTE0MDIGA1UEBxMrUGFzc2F0Z2UgZGUgbGEgQ29uY2VwY2lvIDExIDA4MDA4IEJh
+cmNlbG9uYTEuMCwGA1UECxMlU2VydmVpcyBQdWJsaWNzIGRlIENlcnRpZmljYWNpbyBFQ1YtMjE3
+MDUGA1UECxMuVmVnZXUgaHR0cHM6Ly93d3cuY2F0Y2VydC5uZXQvdmVyQ0lDLTIgICAoYykwMzE0
+MDIGA1UECxMrU2VjcmV0YXJpYSBkJ0FkbWluaXN0cmFjaW8gaSBGdW5jaW8gUHVibGljYTEQMA4G
+A1UEAxMHRUMtU0FGUDAeFw0xMzAxMTExMjI1NTlaFw0xNzAxMTExMjI1NTlaMIHDMQswCQYDVQQG
+EwJFUzEhMB8GA1UEChMYR2VuZXJhbGl0YXQgZGUgQ2F0YWx1bnlhMS4wLAYDVQQLFCVTZXJ2ZWlz
+IFD6YmxpY3MgZGUgQ2VydGlmaWNhY2nzIENEQS0xMTUwMwYDVQQLEyxWZWdldSBodHRwczovL3d3
+dy5jYXRjZXJ0LmNhdC92ZXJDREEtMSAoYykwMzEqMCgGA1UEAxQhQVJHT1MgQXNzaXN0ZW5jaWFs
+IChwcmVwcm9kdWNjafMpMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzHD7SWvAwp7/
+MmVh/XwzjMhdqUHVrQoVIuvI51vlSE+gq4cykYrfjDFSc43E5CE67Wz0bPrSiRPH+xphJ//7TXHu
+TH1z3bXfFSxqL+dtQDxQAf5gd7DPl4u9V+iiMCfOM5Z96cVCf10Tc2Cg7zrjMwJfsDbbfmMVDJxC
+p2QPBod40jF8VHEEq7iMFT5sGjZWCtv6f9wa/oDholf0UQ49wfH3XHsSc4/64fVbM4PhYuDe3g/k
+aRtO389wn7i5ZGBNGa6RQVpCFa4A37WlbdOLJKS8kU2dS2zHx/BsquYYrC/nVF9CeJ8obYo1XFA6
+mLKJhbrp64oP42crFD85M9dv3wIDAQABo4IChzCCAoMwHgYDVR0SBBcwFYETZWNfc2FmcEBjYXRj
+ZXJ0Lm5ldDA4BgNVHREEMTAvgRVpbm5lby5jcGQyQGdlbmNhdC5jYXSkFjAUMRIwEAYDVQQFEwlT
+MDgxMTAwMUcwDgYDVR0PAQH/BAQDAgSwMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDAR
+BglghkgBhvhCAQEEBAMCBaAwHQYDVR0OBBYEFFlAgd9SdJ5u769UvED7sdNiHlkBMB8GA1UdIwQY
+MBaAFAW37U8WUt365pLAonJ5VmBUwiQTMIHMBgNVHSAEgcQwgcEwgb4GCysGAQQB9XgBAwFbMIGu
+MCwGCCsGAQUFBwIBFiBodHRwczovL3d3dy5jYXRjZXJ0LmNhdC92ZXJDREEtMTB+BggrBgEFBQcC
+AjByGnBBcXVlc3Qg6XMgdW4gY2VydGlmaWNhdCBkZSBkaXNwb3NpdGl1IGQnYXBsaWNhY2nzIGFz
+c2VndXJhZGEgZGUgY2xhc3NlIDEuIFZlZ2V1IGh0dHBzOi8vd3d3LmNhdGNlcnQuY2F0L3ZlckNE
+QS0xMHAGCCsGAQUFBwEBBGQwYjAjBggrBgEFBQcwAYYXaHR0cDovL29jc3AuY2F0Y2VydC5jYXQw
+OwYIKwYBBQUHMAKGL2h0dHA6Ly93d3cuY2F0Y2VydC5jYXQvZGVzY2FycmVnYS9zYWZzX2NzcnMu
+Y3J0MGQGA1UdHwRdMFswWaBXoFWGKGh0dHA6Ly9lcHNjZC5jYXRjZXJ0Lm5ldC9jcmwvZWMtc2Fm
+cC5jcmyGKWh0dHA6Ly9lcHNjZDIuY2F0Y2VydC5uZXQvY3JsL2VjLXNhZnAuY3JsMA0GCSqGSIb3
+DQEBBQUAA4IBAQAKI5h76utaY6QRwJQqcfFjJKAWqlZ92oRehL72DH0GpQ6T40FoLHvOqFvD8w9X
+Gwztfd8Z3BOAZesRQ9pPBkwKi0w1PeZoyXfxxwnAnL++U6A3pshkEE0fZdI/cN7xHtyH/EjnWnHI
+2Q+OCq85oqcNGDi9XXOmhzJ8Cyf8AuTcLURGCr3xm5azSa86PdsEAXhBUEOuTkYda1ntcQ9+drcl
+8upd2QztdrsEXQ8FZcHPdnZVr6PeSuDM2DBbd7i7o7YEMCCm0eMqnEA2PTu6lPqvrTewqppxOs3e
+pnadslSaDA5BUeqWN10KyMQ86nepM2WeblEl6fpEIwB+bG+yFWSS
+&lt;/ds:X509Certificate&gt;
+&lt;/ds:X509Data&gt;
+&lt;/ds:KeyInfo&gt;
+&lt;/ds:Signature&gt;&lt;saml:Subject&gt;&lt;saml:NameID&gt;CN=ARGOS Assistencial (preproducció), OU=Vegeu https://www.catcert.cat/verCDA-1 (c)03, OU=Serveis Públics de Certificació CDA-1, O=Generalitat de Catalunya, C=ES&lt;/saml:NameID&gt;&lt;/saml:Subject&gt;&lt;saml:Conditions NotBefore="2015-10-01T16:32:31.525Z" NotOnOrAfter="2015-10-02T02:35:31.525Z"/&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Attribute Name="CIP"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"/&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="ResponsibleUser"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;HCC00208WS&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="PersonalUser"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"/&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="StartDate"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;2015-10-01T18:35:25&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="GivenName"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;Sol.licitant&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="FirstFamilyName"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;Sol.licitant&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="SecondFamilyName"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"/&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="DocumentType"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;01&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="documentNumber"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;89999999X&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="Code"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;11701816&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="Profile"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;MD&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="ProviderOrganization"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;H08000924&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="Entity"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;0208&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute Name="Organization"&gt;&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"&gt;00148&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;/saml:Assertion&gt;</PID.23>
+		</PID>
+	</OMG_O19.PATIENT>
+	<OMG_O19.ORDER>
+		<ORC>
+			<ORC.1>SC</ORC.1>
+			<ORC.2>
+				<EI.1>05381353</EI.1>
+			</ORC.2>
+			<ORC.3>
+				<EI.1>0029221252</EI.1>
+			</ORC.3>
+			<ORC.4>
+				<EI.1>IdMsgIntWmb_2015-09-30 13:12:13.503801</EI.1>
+			</ORC.4>
+			<ORC.5>CM</ORC.5>
+			<ORC.6>F</ORC.6>
+			<ORC.9>
+				<TS.1>20151001</TS.1>
+			</ORC.9>
+			<ORC.12>
+				<XCN.3>U.SUPORT ESP.SANT FELIU (CAP EL PLA</XCN.3>
+			</ORC.12>
+		</ORC>
+		<OBR>
+			<OBR.2>
+				<EI.1>05381353</EI.1>
+			</OBR.2>
+			<OBR.3>
+				<EI.1>0029221252</EI.1>
+			</OBR.3>
+			<OBR.4>
+				<CE.1>RA00056</CE.1>
+				<CE.3>ICS</CE.3>
+			</OBR.4>
+			<OBR.13>Derivació Petició Nova\.br\Derivació Petició Nova</OBR.13>
+		</OBR>
+	</OMG_O19.ORDER>
+</OMG_O19>
