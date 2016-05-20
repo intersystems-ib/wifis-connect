@@ -57,7 +57,7 @@ URL ws Derivacions del centro</Description>
 
 <Property name="URLeConsultes">
 <Description>
-URL ws eConsultes del centro</Description>
+DEPRECATED! URL ws eConsultes del centro.</Description>
 <Type>%String</Type>
 <Parameter name="MAXLEN" value="1024"/>
 </Property>
@@ -65,6 +65,13 @@ URL ws eConsultes del centro</Description>
 <Property name="URLLaboratori">
 <Description>
 URL ws Laboratori del centro</Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1024"/>
+</Property>
+
+<Property name="URLNotificacions">
+<Description>
+URL ws Notificacions del centro</Description>
 <Type>%String</Type>
 <Parameter name="MAXLEN" value="1024"/>
 </Property>
@@ -86,21 +93,21 @@ pURL: parámetro en el que se devolverá la URL o "" (vacío) si no se encuentra
 <Implementation><![CDATA[
 	set ret = $$$OK
 	set pURL = ""
-	set (cites, consultaDades, derivacions, econsultes, laboratori)=""
+	set (cites, consultaDades, derivacions, econsultes, laboratori, notificacions)=""
 	try {
 		&sql(
-		SELECT URLCites, URLConsultaDades, URLDerivacions, URLeConsultes, URLLaboratori 
-		into :cites, :consultaDades, :derivacions, :econsultes, :laboratori
+		SELECT URLCites, URLConsultaDades, URLDerivacions, URLeConsultes, URLLaboratori, URLNotificacions 
+		into :cites, :consultaDades, :derivacions, :econsultes, :laboratori, :notificacions
 		FROM WiFIS_Config.Centro 
 		WHERE Codigo=:pCodigo
 		)
 		if SQLCODE'=0 {
-			set (cites, consultadades, derivacions, econsultes, laboratori)=""
+			set (cites, consultadades, derivacions, econsultes, laboratori, notificacions)=""
 			quit
 		}
 		
 		set servicio=$zconvert(pServicio,"l")
-		set pURL=$case(servicio,"cites":cites,"consultadades":consultadades,"derivacions":derivacions,"econsultes":econsultes,"laboratori":laboratori)
+		set pURL=$case(servicio,"cites":cites,"consultadades":consultadades,"derivacions":derivacions,"econsultes":econsultes,"laboratori":laboratori,"notificacions":notificacions)
 	} catch ex {
 		set ret = ex.AsStatus()
 	}
