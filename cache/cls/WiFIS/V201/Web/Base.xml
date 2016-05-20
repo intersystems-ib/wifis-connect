@@ -78,7 +78,7 @@ Este bloque XML define el contenido de esta página.</Description>
 <group id="wrapper" layout="none">
 <group id="header" layout="none">
 <group id="logo-wrapper" layout="none">
-<group id="hospital-logo" layout="none"><image src="img/logo-wifis.png" width="150px"/></group>
+<group id="hospital-logo" layout="none"><image src="https://camo.githubusercontent.com/41542821164686fbb2bd7a2b458998600ec244b3/687474703a2f2f7777772e696e74657273797374656d732e636f6d2f6173736574732f73697465732f31302f343430342e706e67" width="150px"/></group>
 </group>
 <html id="title" enclosingClass="title">Configuració WiFIS</html> 
 </group>

@@ -56,8 +56,6 @@ onselectrow="zenPage.rowSelected(zenThis,which);"
  <column colName="URLCites" width="100" />
  <column colName="URLConsultaDades" width="100" />
  <column colName="URLDerivacions" width="100" />
- <column colName="URLeConsultes" width="100" />
- <column colName="URLLaboratori" width="100" />
  </tablePane>
 <spacer height="10" />
 
@@ -69,8 +67,9 @@ onselectrow="zenPage.rowSelected(zenThis,which);"
 <text id="txtURLCites" label="URL Cites" size="80" title="URL a trucar per a l'enviament de Cites de WiFIS" dataBinding="URLCites" />
 <text id="txtURLConsultaDades" label="URL ConsultaDades" size="80" title="URL a trucar per a l'enviament de ConsultaDades de WiFIS" dataBinding="URLConsultaDades" />
 <text id="txtURLDerivacions" label="URL Derivacions" size="80" title="URL a trucar per a l'enviament de Derivacions de WiFIS" dataBinding="URLDerivacions" />
-<text id="txtURLeConsultes" label="URL eConsultes" size="80" title="URL a trucar per a l'enviament de eConsultes de WiFIS" dataBinding="URLeConsultes" />
-<text id="txtURLLaboratori" label="URL Laboratori" size="80" title="URL a trucar per a l'enviament de Laboratori de WiFIS" dataBinding="URLLaboratori" />
+<text id="txtURLeConsultes" label="URL eConsultes" size="80" title="URL a trucar per a l'enviament de eConsultes de WiFIS" dataBinding="URLeConsultes" hidden="true"/>
+<text id="txtURLLaboratori" label="URL Laboratori" size="80" title="URL a trucar per a l'enviament de Laboratori de WiFIS" dataBinding="URLLaboratori"/>
+<text id="txtURLNotificacions" label="URL Notificacions" size="80" title="URL a trucar per a l'enviament de Notificacions de WiFIS" dataBinding="URLNotificacions"/>
 <textarea id="txtDescripcion" cols="64" rows="4" 
 	label="Decripció" title="Més detalls sobre aquest Centre" 
 	dataBinding="Descripcion"
