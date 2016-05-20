@@ -121,13 +121,13 @@ Implementa el mismo codigo para todos los WebMethods y todos los WebServices</De
  		set tDoc.PrefixMappings="hl7 urn:hl7-org:v2xml"
  		
  		// MSH.4 origen
- 		$$$THROWONERROR(tSC,tDoc.EvaluateExpression("/hl7:*/hl7:MSH/hl7:MSH.4","hl7:HD.2/text()",.tResults))
+ 		$$$THROWONERROR(tSC,tDoc.EvaluateExpression("/hl7:*/hl7:MSH/hl7:MSH.4","hl7:HD.1/text()",.tResults))
  		if tResults.Count()>0 {
 			set:tResults.GetAt(1).Type=$$$XPATHVALUE tMsg.Origen=tResults.GetAt(1).Value
 		}
 		
 		// MSH.6 destino
-		$$$THROWONERROR(tSC,tDoc.EvaluateExpression("/hl7:*/hl7:MSH/hl7:MSH.6","hl7:HD.2/text()",.tResults))
+		$$$THROWONERROR(tSC,tDoc.EvaluateExpression("/hl7:*/hl7:MSH/hl7:MSH.6","hl7:HD.1/text()",.tResults))
 		if tResults.Count()>0 {
 			set:tResults.GetAt(1).Type=$$$XPATHVALUE tMsg.Destino=tResults.GetAt(1).Value
 		}

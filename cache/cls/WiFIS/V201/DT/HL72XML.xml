@@ -26,8 +26,8 @@ Location and Revision of this file in Perforce (Auto-updating)</Description>
 		set target=##class(WiFIS.V201.Msg.GenericReq).%New()
 		set target.Servicio = ##class(WiFIS.V201.Utils.Functions).WiFISServicio(source)
 		set target.Tipo = ##class(WiFIS.V201.Utils.Functions).WiFISTipo(source)
-		set target.Origen = source.GetValueAt("MSH:4.2")
-		set target.Destino = source.GetValueAt("MSH:6.2")
+		set target.Origen = source.GetValueAt("MSH:4.1")
+		set target.Destino = source.GetValueAt("MSH:6.1")
 		
 		set tmpHL7 = source.%ConstructClone()
 		do tmpHL7.BuildMap()
