@@ -83,10 +83,25 @@ Target Business Host to Send the Message to</Description>
 <Type>%String</Type>
 </Property>
 
+<Property name="Charset">
+<Description>
+Conversión de caracteres que se aplicará al mensaje de entrada (vacío para no aplicar ninguna).</Description>
+<Type>%String</Type>
+<InitialExpression>"UTF8"</InitialExpression>
+<Parameter name="MAXLEN" value="50"/>
+</Property>
+
+<Property name="ReturnSOAPFault">
+<Description>
+Devolver SOAP Fault si se produce un error al recibir el mensaje WiFIS</Description>
+<Type>%Boolean</Type>
+<InitialExpression>0</InitialExpression>
+</Property>
+
 <Parameter name="SETTINGS">
 <Description>
 Can't do grace period without an OnTask loop</Description>
-<Default><![CDATA[-AlertGracePeriod,ValidateSchema,XMLSchemaFile,WSDLFile,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId}]]></Default>
+<Default><![CDATA[Charset:WiFIS,ReturnSOAPFault:WiFIS,-AlertGracePeriod,ValidateSchema,XMLSchemaFile,WSDLFile,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId}]]></Default>
 </Parameter>
 
 <Method name="Forward">
@@ -111,7 +126,15 @@ Implementa el mismo codigo para todos los WebMethods y todos los WebServices</De
 	 	
 	 	// crear mensaje WiFIS Ensemble
  		set tMsg=##class(WiFIS.V201.Msg.GenericReq).%New()
- 		do tMsg.DatosXML.Write($zconvert(pAny, "I", "UTF8"))
+ 		
+ 		// convertir la cadena XML recibida en el webservice
+ 		set converted = pAny
+ 		if ..Charset="UTF8" {
+ 			set converted = $zconvert(pAny, "O", "UTF8")
+ 		}
+ 		do tMsg.DatosXML.Write(converted)
+ 		
+ 		// método y servicio WiFIS
  		set tMsg.Tipo=pMethodName
  		set tMsg.Servicio=pServiceName 
  		
@@ -174,17 +197,35 @@ Implementa el mismo codigo para todos los WebMethods y todos los WebServices</De
 	 	// copiar informacion de error
 	 	set tError=##class(WiFIS.V201.BS.s1.WSMissatge).%New()
 	 	set tCodi=+$SYSTEM.Status.GetErrorCodes(tSC)
-	 	set tError.codi=$SELECT(tCodi=10001:"WIFIS_DEST_UNK",tCodi=10002:"WIFIS_SRC_UNK",tCodi=10003:"WIFIS_TIMEOUT",tCodi=10004:"WIFIS_INVALID",1:"WIFIS_INVALID")  //10002 & 1 was WFIS_ERROR_PLATAFORMA
-		if ($g(%tMsg)="") { 	
-	 		set tError.descripcio=$SYSTEM.Status.GetOneErrorText(tSC)
-		}else {
+	 	
+	 	set tError.codi=$select(tCodi=10001:"WIFIS_DEST_UNK",tCodi=10002:"WIFIS_SRC_UNK",tCodi=10003:"WIFIS_TIMEOUT",tCodi=10004:"WIFIS_INVALID",1:"WIFIS_INVALID")  //10002 & 1 was WFIS_ERROR_PLATAFORMA
+		if ($get(%tMsg)="") { 	
+	 		set tError.descripcio=$SYSTEM.Status.GetErrorText(tSC)
+		} else {
 			set tError.descripcio=%tMsg
 		}
+		
+		// log de eventos
+	 	$$$LOGERROR("Error.code="_tError.codi_"; Error.descripcion="_tError.descripcio)
+		
+		// mensaje respuesta con error wifis
 	 	do tRspMsg.LlistaMissatges.Insert(tError)
-	 	$$$TRACE("Error.code="_tError.codi_"; Error.descripcion="_tError.descripcio)
 	 	
+	 	// registrar error en estadísticas wifis
 	 	set tCodi=tError.descripcio
  		do ##class(WiFIS.Stats.Messages).LogMsg("E",pServiceName,pMethodName,tMsg.Origen,tMsg.Destino,$g(tCodi),$get(tFechaHoraIn),$zdt($h,3))
+ 		
+ 		// registro error y alertas
+ 		if ..ReturnSOAPFault {
+	 		// devolver SOAP Fault. servicio marcará error y enviará alerta si está configurado.
+	 		do ..ReturnStatusFault($$$FAULTClient, tSC)
+ 		} 
+ 		else {
+	 		// marcar servicio en estado de error
+	 		$$$SetHostMonitor(..%ConfigName,$$$eMonitorStatus,"Error")
+	 		// no devuelve Fault, pero se envía alerta si está configurado.	
+	 		if ..AlertOnError do ..SendAlert(##class(Ens.AlertRequest).%New($LB(..%ConfigName,$$$StatusDisplayString(tSC))))
+ 		}
  	}
  	
 	quit tRspMsg
