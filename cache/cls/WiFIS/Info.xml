@@ -32,6 +32,7 @@
 	<li>2.5 - Actualizado: incluido campo IDFlux en WSMissatge (WiFIS_Comu.xsd) que faltaba en WSDL WiFIS.</li>
 	<li>2.6 - Actualizado: WiFIS V2.0.1 (últimos cambios) + opciones generación ticket SAML con java</li>
 	<li>2.7 - Corregido: correspondencias origen/destino de segmento MSH (WiFIS V2.0.1), configuración de centros </li>
+	<li>2.8 - Corregido: parseo UTF8, registro errores y alertas en WiFIS.V201.BS.Service.</li>
 </ul>]]></Description>
 <Super>%RegisteredObject</Super>
 <TimeCreated>63169,54751.514257</TimeCreated>
@@ -43,7 +44,7 @@ Location and Revision of this file in Perforce (Auto-updating)</Description>
 </Parameter>
 
 <Parameter name="VERSION">
-<Default>2.7</Default>
+<Default>2.8</Default>
 </Parameter>
 
 <Parameter name="PORTING">
