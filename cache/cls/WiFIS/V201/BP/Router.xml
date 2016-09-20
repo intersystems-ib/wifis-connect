@@ -8,6 +8,29 @@
 <Super>Ens.BusinessProcessBPL</Super>
 <TimeCreated>62251,61236.78099</TimeCreated>
 
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V201/BP/Router.xml#3 $</Default>
+</Parameter>
+
+<Property name="TargetConfigName">
+<Description>
+Nombre de configuración de destino. Si se configura, todos los mensajes se enviarán a este destino siempre (no se calculará a qué destino hay que enviarlo en función del contenido).</Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="500"/>
+</Property>
+
+<Property name="SAMLJava">
+<Description>
+Generar ticket SAML utilizando librerias java</Description>
+<Type>%Boolean</Type>
+</Property>
+
+<Parameter name="SETTINGS">
+<Default><![CDATA[SAMLJava:WiFIS,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId},-ThrottleDelay,ReplyCodeActions,RetryInterval,AlertRetryGracePeriod:Alerting,FailureTimeout,QueueCountAlert:Alerting,QueueWaitAlert:Alerting]]></Default>
+</Parameter>
+
 <XData name="BPL">
 <Description>
 BPL Definition</Description>
@@ -15,20 +38,17 @@ BPL Definition</Description>
 <Data><![CDATA[
 <process language='objectscript' request='WiFIS.V201.Msg.GenericReq' response='WiFIS.V201.BS.s1.WSResposta' height='2250' width='2000' >
 <context>
-<property name='BOResponse' type='WiFIS.V201.WSC.s1.WSResposta' initialexpression='##class(WiFIS.V201.WSC.s1.WSResposta).%New()' instantiate='0' >
-</property>
-<property name='TargetConfigName' type='%String' instantiate='0' >
-</property>
-<property name='BORequest' type='WiFIS.V201.Msg.GenericReq' instantiate='0' >
-</property>
+<property name='BOResponse' type='WiFIS.V201.WSC.s1.WSResposta' initialexpression='##class(WiFIS.V201.WSC.s1.WSResposta).%New()' instantiate='0' />
+<property name='TargetConfigName' type='%String' instantiate='0' />
+<property name='BORequest' type='WiFIS.V201.Msg.GenericReq' instantiate='0' />
 <property name='SAMLTicket' type='%String' instantiate='0' >
 <parameters>
 <parameter name='MAXLEN'  value='' />
 </parameters>
 </property>
 </context>
-<sequence xend='200' yend='2000' >
-<scope name='scope5' xpos='200' ypos='250' xend='200' yend='1900' >
+<sequence xend='200' yend='2350' >
+<scope name='scope5' xpos='200' ypos='250' xend='200' yend='2250' >
 <code name='Inicializar BORequest' xpos='200' ypos='350' >
 <![CDATA[ set context.BORequest=request]]]]><![CDATA[>
 </code>
@@ -56,9 +76,18 @@ configurada en tabla centros.]]]]><![CDATA[></annotation>
 </if>
 <trace name='Mostrar Destino' value='"TargetConfigName="_context.TargetConfigName' xpos='200' ypos='900' />
 <trace name='Mostrar URL' value='"URL="_context.BORequest.URL' xpos='200' ypos='1000' />
-<if name='SAMLJava?' condition='..%Process.SAMLJava=1' xpos='200' ypos='1100' xend='200' yend='1350' >
+<if name='SAMLTicket externo?' condition='request.SAMLTicket&apos;=""' xpos='200' ypos='1100' xend='200' yend='1350' >
+<annotation><![CDATA[SAMLTicket externo 
+informado en request?]]]]><![CDATA[></annotation>
 <true>
-<call name='SAMLjava' target='SAMLjava' async='0' timeout='10' xpos='335' ypos='1250' >
+<assign name="Asignar SAMLTicket" property="context.SAMLTicket" value="request.SAMLTicket" action="set" xpos='335' ypos='1250' />
+</true>
+</if>
+<if name='SAMLJava?' condition='..%Process.SAMLJava=1' xpos='200' ypos='1450' xend='200' yend='1700' >
+<annotation><![CDATA[Calcular SAMLTicket
+utilizando Java]]]]><![CDATA[></annotation>
+<true>
+<call name='SAMLjava' target='SAMLjava' async='0' timeout='10' xpos='335' ypos='1600' >
 <annotation><![CDATA[Generar ticket SAML (java)]]]]><![CDATA[></annotation>
 <request type='Ens.StringRequest' />
 <response type='Ens.StringResponse' >
@@ -67,7 +96,7 @@ configurada en tabla centros.]]]]><![CDATA[></annotation>
 </call>
 </true>
 </if>
-<call name='Enviar WiFIS' target='@context.TargetConfigName' async='1' xpos='200' ypos='1450' >
+<call name='Enviar WiFIS' target='@context.TargetConfigName' async='1' xpos='200' ypos='1800' >
 <annotation><![CDATA[Enviar a BO WiFIS (TargetConfigName)]]]]><![CDATA[></annotation>
 <request type='WiFIS.V201.Msg.GenericReq' >
 <assign property="callrequest.URL" value="context.BORequest.URL" action="set" />
@@ -82,8 +111,8 @@ configurada en tabla centros.]]]]><![CDATA[></annotation>
 <assign property="context.BOResponse" value="callresponse" action="set" />
 </response>
 </call>
-<sync name='Esperar Respuesta WiFIS' calls='Enviar WiFIS' timeout='900' allowresync='true' type='all' xpos='200' ypos='1550' />
-<code name='Copiar Respuesta BO' xpos='200' ypos='1650' >
+<sync name='Esperar Respuesta WiFIS' calls='Enviar WiFIS' timeout='900' allowresync='true' type='all' xpos='200' ypos='1900' />
+<code name='Copiar Respuesta BO' xpos='200' ypos='2000' >
 <annotation><![CDATA[Copiar respuesta BO para devolverla como resultado de este proceso.]]]]><![CDATA[></annotation>
 <![CDATA[ $$$TRACE("Copiar Respuesta WiFIS BO")
  if $isobject(context.BOResponse),$classname(context.BOResponse)="WiFIS.V201.WSC.s1.WSResposta" {
@@ -103,7 +132,7 @@ configurada en tabla centros.]]]]><![CDATA[></annotation>
  }]]]]><![CDATA[>
 </code>
 <faulthandlers>
-<catchall xpos='200' ypos='1750' xend='200' yend='550' >
+<catchall xpos='200' ypos='2100' xend='200' yend='550' >
 <trace name='Catch' value='"Error en WiFIS Router"' xpos='200' ypos='250' />
 <alert name='alert' value='"Catch!: "_$system.Status.GetOneErrorText(..%Context.%LastError)' xpos='200' ypos='350' />
 <code name='Gestion de Error' xpos='200' ypos='450' >
@@ -123,29 +152,6 @@ configurada en tabla centros.]]]]><![CDATA[></annotation>
 </process>
 ]]></Data>
 </XData>
-
-<Parameter name="SrcVer">
-<Description>
-Location and Revision of this file in Perforce (Auto-updating)</Description>
-<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V201/BP/Router.xml#3 $</Default>
-</Parameter>
-
-<Property name="TargetConfigName">
-<Description>
-Nombre de configuración de destino. Si se configura, todos los mensajes se enviarán a este destino siempre (no se calculará a qué destino hay que enviarlo en función del contenido).</Description>
-<Type>%String</Type>
-<Parameter name="MAXLEN" value="500"/>
-</Property>
-
-<Property name="SAMLJava">
-<Description>
-Generar ticket SAML utilizando librerias java</Description>
-<Type>%Boolean</Type>
-</Property>
-
-<Parameter name="SETTINGS">
-<Default><![CDATA[SAMLJava:WiFIS,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId},-ThrottleDelay,ReplyCodeActions,RetryInterval,AlertRetryGracePeriod:Alerting,FailureTimeout,QueueCountAlert:Alerting,QueueWaitAlert:Alerting]]></Default>
-</Parameter>
 
 <Storage name="Default">
 <Type>%Library.CacheStorage</Type>
