@@ -8,39 +8,19 @@
 <Super>Ens.BusinessProcessBPL</Super>
 <TimeCreated>62251,61236.78099</TimeCreated>
 
-<Parameter name="SrcVer">
-<Description>
-Location and Revision of this file in Perforce (Auto-updating)</Description>
-<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V201/BP/Router.xml#3 $</Default>
-</Parameter>
-
-<Property name="TargetConfigName">
-<Description>
-Nombre de configuración de destino. Si se configura, todos los mensajes se enviarán a este destino siempre (no se calculará a qué destino hay que enviarlo en función del contenido).</Description>
-<Type>%String</Type>
-<Parameter name="MAXLEN" value="500"/>
-</Property>
-
-<Property name="SAMLJava">
-<Description>
-Generar ticket SAML utilizando librerias java</Description>
-<Type>%Boolean</Type>
-</Property>
-
-<Parameter name="SETTINGS">
-<Default><![CDATA[SAMLJava:WiFIS,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId},-ThrottleDelay,ReplyCodeActions,RetryInterval,AlertRetryGracePeriod:Alerting,FailureTimeout,QueueCountAlert:Alerting,QueueWaitAlert:Alerting]]></Default>
-</Parameter>
-
 <XData name="BPL">
 <Description>
 BPL Definition</Description>
 <XMLNamespace>http://www.intersystems.com/bpl</XMLNamespace>
 <Data><![CDATA[
-<process language='objectscript' request='WiFIS.V201.Msg.GenericReq' response='WiFIS.V201.BS.s1.WSResposta' height='2250' width='2000' >
+<process language='objectscript' request='WiFIS.V201.Msg.GenericReq' response='WiFIS.V201.BS.s1.WSResposta' height='2600' width='2000' >
 <context>
-<property name='BOResponse' type='WiFIS.V201.WSC.s1.WSResposta' initialexpression='##class(WiFIS.V201.WSC.s1.WSResposta).%New()' instantiate='0' />
-<property name='TargetConfigName' type='%String' instantiate='0' />
-<property name='BORequest' type='WiFIS.V201.Msg.GenericReq' instantiate='0' />
+<property name='BOResponse' type='WiFIS.V201.WSC.s1.WSResposta' initialexpression='##class(WiFIS.V201.WSC.s1.WSResposta).%New()' instantiate='0' >
+</property>
+<property name='TargetConfigName' type='%String' instantiate='0' >
+</property>
+<property name='BORequest' type='WiFIS.V201.Msg.GenericReq' instantiate='0' >
+</property>
 <property name='SAMLTicket' type='%String' instantiate='0' >
 <parameters>
 <parameter name='MAXLEN'  value='' />
@@ -120,6 +100,7 @@ utilizando Java]]]]><![CDATA[></annotation>
      set tError=##class(WiFIS.V201.BS.s1.WSMissatge).%New()
      set tError.codi=context.BOResponse.LlistaMissatges.GetAt(i).codi
      set tError.descripcio=context.BOResponse.LlistaMissatges.GetAt(i).descripcio
+     set tError.IDFlux=context.BOResponse.LlistaMissatges.GetAt(i).IDFlux
      do response.LlistaMissatges.Insert(tError)
    }
  } else {
@@ -152,6 +133,29 @@ utilizando Java]]]]><![CDATA[></annotation>
 </process>
 ]]></Data>
 </XData>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V201/BP/Router.xml#3 $</Default>
+</Parameter>
+
+<Property name="TargetConfigName">
+<Description>
+Nombre de configuración de destino. Si se configura, todos los mensajes se enviarán a este destino siempre (no se calculará a qué destino hay que enviarlo en función del contenido).</Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="500"/>
+</Property>
+
+<Property name="SAMLJava">
+<Description>
+Generar ticket SAML utilizando librerias java</Description>
+<Type>%Boolean</Type>
+</Property>
+
+<Parameter name="SETTINGS">
+<Default><![CDATA[SAMLJava:WiFIS,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId},-ThrottleDelay,ReplyCodeActions,RetryInterval,AlertRetryGracePeriod:Alerting,FailureTimeout,QueueCountAlert:Alerting,QueueWaitAlert:Alerting]]></Default>
+</Parameter>
 
 <Storage name="Default">
 <Type>%Library.CacheStorage</Type>
