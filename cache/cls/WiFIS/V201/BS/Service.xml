@@ -107,7 +107,7 @@ Can't do grace period without an OnTask loop</Description>
 <Method name="Forward">
 <Description>
 Implementa el mismo codigo para todos los WebMethods y todos los WebServices</Description>
-<FormalSpec>pAny:%XML.String,pServiceName:%String,pMethodName:%String</FormalSpec>
+<FormalSpec>pAny:%XML.GlobalCharacterStream,pServiceName:%String,pMethodName:%String</FormalSpec>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <Implementation><![CDATA[
 	#dim tSC as %Status=$$$OK	
