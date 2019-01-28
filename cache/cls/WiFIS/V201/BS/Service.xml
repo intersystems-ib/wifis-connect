@@ -128,12 +128,14 @@ Implementa el mismo codigo para todos los WebMethods y todos los WebServices</De
  		set tMsg=##class(WiFIS.V201.Msg.GenericReq).%New()
  		
  		// convertir la cadena XML recibida en el webservice
- 		set converted = pAny
+ 		set converted = ##class(%XML.GlobalCharacterStream).%New()
  		if ..Charset="UTF8" {
- 			set converted = $zconvert(pAny, "O", "UTF8")
+			while 'pAny.AtEnd {
+				do converted.Write($zconvert(pAny.Read(), "O", "UTF8"))
+			}
  		}
- 		do tMsg.DatosXML.Write(converted)
- 		
+ 		do tMsg.DatosXML.CopyFrom(converted)
+
  		// método y servicio WiFIS
  		set tMsg.Tipo=pMethodName
  		set tMsg.Servicio=pServiceName 

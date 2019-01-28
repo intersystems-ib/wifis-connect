@@ -6,12 +6,6 @@ Producción de ejemplo para probar componentes WiFIS utilizando ticket SAML</Des
 <Super>Ens.Production</Super>
 <TimeCreated>63481,57439.532402</TimeCreated>
 
-<Parameter name="SrcVer">
-<Description>
-Location and Revision of this file in Perforce (Auto-updating)</Description>
-<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V201/Test/ProdSAML.xml#2 $</Default>
-</Parameter>
-
 <XData name="ProductionDefinition">
 <Data><![CDATA[
 <Production Name="WiFIS.V201.Test.ProdSAML" TestingEnabled="true" LogGeneralTraceEvents="true">
@@ -93,7 +87,7 @@ Location and Revision of this file in Perforce (Auto-updating)</Description>
     <Setting Target="Host" Name="ClassPath">C:\Test\HC3SA\lib\Utils.jar;C:\Test\HC3SA\lib\jdk1.5\bcprov-jdk15-134.jar;C:\Test\HC3SA\lib\jdk1.5\xmlsec-1.3.0.jar;C:\Test\HC3SA\lib\jdk1.5\xmlsec-1.3.0-commons-logging.jar;C:\Test\HC3SA\lib\jdk1.5\jargs-1.0.jar;C:\Test\HC3SA\lib\jdk1.5\log4j-1.2.13.jar;C:\Test\HC3SA\lib\jdk1.5\xmltooling-1.0-TP2-jdk-1.5.jar;C:\Test\HC3SA\lib\jdk1.5\retroweaver-rt-1.2.4.jar;C:\Test\HC3SA\lib\jdk1.5\httpclient-3.0.1.jar;C:\Test\HC3SA\lib\jdk1.5\joda-time-1.3.jar;C:\Test\HC3SA\lib\jdk1.5\httpclient-3.0.1-commons-codec-1.3.jar;C:\Test\HC3SA\lib\jdk1.5\opensaml-2.0-TP2-jdk-1.5.jar;C:\Test\HC3SA\lib\jdk1.5\javolution.jar;C:\Test\HC3SA\lib\HCCsa.jar;C:\Test\HC3SA\hc3saSamlProxy.jar;C:\Test\HC3SA\lib\xml\resolver-2.9.1.jar;C:\Test\HC3SA\lib\xml\serializer-2.9.1.jar;C:\Test\HC3SA\lib\xml\xalan-2.7.1.jar;C:\Test\HC3SA\lib\xml\xercesImpl-2.9.1.jar;C:\Test\HC3SA\lib\xml\xml-apis-2.9.1.jar;</Setting>
     <Setting Target="Host" Name="JDKVersion">JDK17</Setting>
     <Setting Target="Host" Name="JVMArgs">-Dfile.encoding=UTF-8 -Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl</Setting>
-    <Setting Target="Host" Name="JavaHome">C:\Program Files\Java\jdk1.8.0_65</Setting>
+    <Setting Target="Host" Name="JavaHome">C:\Program Files\Java\jdk1.8.0_111</Setting>
     <Setting Target="Host" Name="Logfile">c:\temp\gateway.log</Setting>
   </Item>
   <Item Name="Leer HL7 XML Fichero" Category="Salida" ClassName="ITB.HL7.BS.FileXMLService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
@@ -106,5 +100,11 @@ Location and Revision of this file in Perforce (Auto-updating)</Description>
 </Production>
 ]]></Data>
 </XData>
+
+<Parameter name="SrcVer">
+<Description>
+Location and Revision of this file in Perforce (Auto-updating)</Description>
+<Default>$Id: //custom_ccrs/_common/tools/Iberia/WiFIS/latest/cls/WiFIS/V201/Test/ProdSAML.xml#2 $</Default>
+</Parameter>
 </Class>
 </Export>

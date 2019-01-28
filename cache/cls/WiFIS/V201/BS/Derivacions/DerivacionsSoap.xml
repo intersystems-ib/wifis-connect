@@ -55,7 +55,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="ConfirmarAccio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -70,7 +70,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="DemanarAddicional">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -85,7 +85,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="DemanarCancelacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -100,7 +100,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="DemanarModificacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -115,7 +115,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="DemanarNova">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -130,7 +130,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="NotificarCancelacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -145,7 +145,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="NotificarFinalitzacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -160,7 +160,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="NotificarModificacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -175,7 +175,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="NotificarResultats">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -190,7 +190,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="RespondreAddicional">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -205,7 +205,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="RespondreCancelacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -220,7 +220,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="RespondreModificacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -235,7 +235,7 @@ Namespaces of referenced classes will be used in the WSDL.</Description>
 
 <Method name="RespondreNova">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.BS.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>

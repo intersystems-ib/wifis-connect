@@ -30,7 +30,6 @@ This is the default message handler.  All request types not declared in the mess
 	#dim tSC as %Status=$$$OK
 	#dim errObj as %Exception.AbstractException
 	#dim tResult as WiFIS.WSC.V201.s1.WSResposta
-	#dim tXML=""
 	
 	try {
 		$$$TRACE("OnMessage: Tipo="_pReq.Tipo_", URL="_pReq.URL)
@@ -38,11 +37,6 @@ This is the default message handler.  All request types not declared in the mess
 			set ..Adapter.WebServiceURL=pReq.URL
 		}
 		$$$TRACE("URL utilizada: "_..Adapter.WebServiceURL)
-		
-		do pReq.DatosXML.Rewind()
- 		while('pReq.DatosXML.AtEnd) {
- 			set tXML=tXML_pReq.DatosXML.Read()
- 		}
  		
  		// SAML
  		if pReq.SAMLTicket'="" {
@@ -53,7 +47,7 @@ This is the default message handler.  All request types not declared in the mess
  		
  		// llamar cliente webservice
  		set tFechaHoraOut = $zdt($h,3)
- 		set tSC = ..Adapter.InvokeMethod(pReq.Tipo,.pResp,tXML)
+ 		set tSC = ..Adapter.InvokeMethod(pReq.Tipo,.pResp,pReq.DatosXML)
  		
  		// recuperar el código de la respuesta (para estadísticas)
  		set tCodi=""

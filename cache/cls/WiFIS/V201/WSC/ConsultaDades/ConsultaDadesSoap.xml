@@ -7,7 +7,7 @@
 
 <Method name="ConsultarCercaPacient">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -20,7 +20,7 @@
 
 <Method name="ConsultarDadesCliniques">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -33,7 +33,7 @@
 
 <Method name="ConsultarDadesDemografiques">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -46,7 +46,7 @@
 
 <Method name="ConsultarEstatOrdre">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -59,7 +59,7 @@
 
 <Method name="RespondreConsultaCercaPacient">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -72,7 +72,7 @@
 
 <Method name="RespondreConsultaDadesCliniques">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -85,7 +85,7 @@
 
 <Method name="RespondreConsultaDadesDemografiques">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -98,7 +98,7 @@
 
 <Method name="RespondreConsultaEstatOrdre">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>

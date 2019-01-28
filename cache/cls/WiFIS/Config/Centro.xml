@@ -151,6 +151,9 @@ pURL: parámetro en el que se devolverá la URL o "" (vacío) si no se encuentra
 <Value name="9">
 <Value>URLLaboratori</Value>
 </Value>
+<Value name="10">
+<Value>URLNotificacions</Value>
+</Value>
 </Data>
 </Storage>
 </Class>

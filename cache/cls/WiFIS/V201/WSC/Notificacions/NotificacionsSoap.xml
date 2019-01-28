@@ -7,7 +7,7 @@
 
 <Method name="ConfirmarAccio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -20,7 +20,7 @@
 
 <Method name="NotificacioAlerta">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
@@ -33,7 +33,7 @@
 
 <Method name="NotificacioRealitzacio">
 <Final>1</Final>
-<FormalSpec>any:%XML.String(XMLPROJECTION="any")</FormalSpec>
+<FormalSpec>any:%XML.GlobalCharacterStream(XMLPROJECTION="any")</FormalSpec>
 <ProcedureBlock>1</ProcedureBlock>
 <ReturnType>WiFIS.V201.WSC.s1.WSResposta</ReturnType>
 <WebMethod>1</WebMethod>
