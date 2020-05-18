@@ -1,11 +1,13 @@
-version: '3.2'
+version: '3.7'
 
 services:
   # development environment for wifisconnect
   wifisconnect:
+    init: true
     build:
       dockerfile: Dockerfile
       context: .
+    image: wifisconnect:latest
     container_name: wifisconnect
     ports:
     - "51773:51773"
