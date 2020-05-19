@@ -1,1 +1,5 @@
 *.bak
+samples/input/*.hl7
+samples/input/*.xml
+samples/output/*.hl7
+samples/output/*.xml

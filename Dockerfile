@@ -40,6 +40,7 @@ RUN \
   set vars("Namespace")="WIFISCONNECT" \
   set vars("CreateNamespace")="no" \
   set vars("BasePath")="/opt/wifisconnect/app" \
+  set vars("CreateDevWebApp")="yes" \
   set sc = ##class(WiFIS.V201.Utils.Installer).RunWithParams(.vars) \
   # iris config
   zn "%SYS" \

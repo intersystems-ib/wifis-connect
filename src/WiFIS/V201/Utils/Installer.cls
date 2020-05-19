@@ -12,6 +12,8 @@ Parameter DataDBPath = "/opt/wifisconnect/db/data";
 
 Parameter CodeDBPath = "/opt/wifisconnect/db/code";
 
+Parameter CreateDevWebApp = "no";
+
 XData Install
 {
 <Manifest>
@@ -57,7 +59,7 @@ ClassMethod RunWithParams(ByRef vars) As %Status
         write "START INSTALLER",! 
 
 		// set default values for installer variables
-        for ivar="BasePath","Namespace","CreateNamespace","CreateDB","DataDBPath","CodeDBPath" {
+        for ivar="BasePath","Namespace","CreateNamespace","CreateDB","DataDBPath","CodeDBPath","CreateDevWebApp" {
             if '$data(vars(ivar)) set vars(ivar)=$parameter($classname(), ivar)
         }
 
@@ -73,6 +75,11 @@ ClassMethod RunWithParams(ByRef vars) As %Status
 		}
 
 		$$$ThrowOnError(..RunManifest(.vars))
+
+		// create development web application (dev purposes only!)
+		if vars("CreateDevWebApp")="yes" { 
+			$$$ThrowOnError(..CreateWebApp(vars("Namespace"), "/wifisconnect/ws", ""))
+		}
 
 		// check installation: version, unitests
 		set $namespace = vars("Namespace")
@@ -139,6 +146,26 @@ ClassMethod Check(pBasePath As %String) As %Status
 ClassMethod Log(pText As %String, pTimeStamp As %Boolean = 1, pNewLine As %Boolean = 1)
 {
 	write $case(pTimeStamp,1:"["_$zdt($h,3)_"] ",:"")_pText_$case(pNewLine,1:$$$NL,:"")
+}
+
+/// Create web application
+ClassMethod CreateWebApp(pNamespace As %String, pWebApp As %String, pDispatch As %String) As %Status
+{
+  set ret = $$$OK
+  try {
+    zn "%SYS" 
+    set webName = pWebApp 
+    set webProperties("DispatchClass") = pDispatch 
+    set webProperties("NameSpace") = pNamespace 
+    set webProperties("Enabled") = 1 
+    set webProperties("AutheEnabled") = 64
+	set webProperties("MatchRoles")=":%All"
+    $$$ThrowOnError(##class(Security.Applications).Create(webName, .webProperties))
+
+  } catch ex {
+    set ret = ex.AsStatus()
+  } 
+  quit ret
 }
 
 /// Change generator attribute in Export config items for Ensemble compatibility
