@@ -43,12 +43,12 @@ RUN \
   set sc = ##class(ITB.Installer).RunWithParams(.vars) \
   # wifisconnect installation
   kill vars \
-  do $SYSTEM.OBJ.Load("/opt/wifisconnect/app/src/WiFIS/V201/Utils/Installer.cls", "ck") \
+  do $SYSTEM.OBJ.Load("/opt/wifisconnect/app/src/WiFIS/V202/Utils/Installer.cls", "ck") \
   set vars("Namespace")="WIFISCONNECT" \
   set vars("CreateNamespace")="no" \
   set vars("BasePath")="/opt/wifisconnect/app" \
   set vars("CreateTestWebApp")="yes" \
-  set sc = ##class(WiFIS.V201.Utils.Installer).RunWithParams(.vars) \
+  set sc = ##class(WiFIS.V202.Utils.Installer).RunWithParams(.vars) \
   # iris config
   zn "%SYS" \
   do ##class(SYS.Container).QuiesceForBundling() \

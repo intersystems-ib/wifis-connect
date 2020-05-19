@@ -3,9 +3,6 @@
 Class WiFIS.Config.Centro Extends (%Persistent, %XML.Adaptor, %ZEN.DataModel.Adaptor)
 {
 
-/// Location and Revision of this file in Perforce (Auto-updating)
-Parameter SrcVer = "$Id$";
-
 /// Codigo del centro en los mensajes HL7
 Property Codigo As %String [ Required ];
 
