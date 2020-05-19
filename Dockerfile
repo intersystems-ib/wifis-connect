@@ -3,6 +3,13 @@ ARG IMAGE=store/intersystems/irishealth-community:2020.1.0.215.0
 FROM $IMAGE
 
 USER root
+
+# install java (used to build SAML ticket)
+RUN apt-get update && \
+	apt-get install -y openjdk-8-jdk && \
+	apt-get clean
+
+# prepare wifis-connect directories
 RUN mkdir -p /opt/wifisconnect
 RUN mkdir -p /opt/wifisconnect/app
 RUN mkdir -p /opt/wifisconnect/db
@@ -40,7 +47,7 @@ RUN \
   set vars("Namespace")="WIFISCONNECT" \
   set vars("CreateNamespace")="no" \
   set vars("BasePath")="/opt/wifisconnect/app" \
-  set vars("CreateDevWebApp")="yes" \
+  set vars("CreateTestWebApp")="yes" \
   set sc = ##class(WiFIS.V201.Utils.Installer).RunWithParams(.vars) \
   # iris config
   zn "%SYS" \

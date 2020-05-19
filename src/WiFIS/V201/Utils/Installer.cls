@@ -12,7 +12,7 @@ Parameter DataDBPath = "/opt/wifisconnect/db/data";
 
 Parameter CodeDBPath = "/opt/wifisconnect/db/code";
 
-Parameter CreateDevWebApp = "no";
+Parameter CreateTestWebApp = "no";
 
 XData Install
 {
@@ -38,7 +38,7 @@ XData Install
             <Import File="${SourcePath}" Recurse="1" Flags="cuk" />
         	<Import File="${ConfigPath}" Recurse="1" Flags="cuk" />
         </Namespace>
-    </If>
+	</If>
 </Manifest>
 }
 
@@ -59,7 +59,7 @@ ClassMethod RunWithParams(ByRef vars) As %Status
         write "START INSTALLER",! 
 
 		// set default values for installer variables
-        for ivar="BasePath","Namespace","CreateNamespace","CreateDB","DataDBPath","CodeDBPath","CreateDevWebApp" {
+        for ivar="BasePath","Namespace","CreateNamespace","CreateDB","DataDBPath","CodeDBPath","CreateTestWebApp","ClassPath","ImportJavaHC3SA", "StartTestProduction" {
             if '$data(vars(ivar)) set vars(ivar)=$parameter($classname(), ivar)
         }
 
@@ -76,8 +76,8 @@ ClassMethod RunWithParams(ByRef vars) As %Status
 
 		$$$ThrowOnError(..RunManifest(.vars))
 
-		// create development web application (dev purposes only!)
-		if vars("CreateDevWebApp")="yes" { 
+		// create web application
+		if vars("CreateTestWebApp")="yes" { 
 			$$$ThrowOnError(..CreateWebApp(vars("Namespace"), "/wifisconnect/ws", ""))
 		}
 
@@ -191,6 +191,34 @@ ClassMethod DownGradeConfigFiles(pDir As %String) As %Status
 			do file.CopyFrom(tmpstream)
 			do file.%Save()
 		}
+	} catch ex {
+		set ret = ex.AsStatus()
+	}
+	quit ret
+}
+
+/// Import java HC3SA classes to generate SAML ticket
+ClassMethod ImportJavaHC3SA(jarFile As %String = "", classPath As %String = "", gatewayHost As %String = "", gatewayPort As %String = "") As %Status
+{
+	set ret = $$$OK
+	try {
+		// default development container values
+		if jarFile="" set jarFile="/app/hc3sa/hc3saSamlProxy.jar"
+		if classPath="" set classPath="/app/hc3sa/lib/Utils.jar;/app/hc3sa/lib/jdk1.5/bcprov-jdk15-134.jar;/app/hc3sa/lib/jdk1.5/xmlsec-1.3.0.jar;/app/hc3sa/lib/jdk1.5/xmlsec-1.3.0-commons-logging.jar;/app/hc3sa/lib/jdk1.5/jargs-1.0.jar;/app/hc3sa/lib/jdk1.5/log4j-1.2.13.jar;/app/hc3sa/lib/jdk1.5/xmltooling-1.0-TP2-jdk-1.5.jar;/app/hc3sa/lib/jdk1.5/retroweaver-rt-1.2.4.jar;/app/hc3sa/lib/jdk1.5/httpclient-3.0.1.jar;/app/hc3sa/lib/jdk1.5/joda-time-1.3.jar;/app/hc3sa/lib/jdk1.5/httpclient-3.0.1-commons-codec-1.3.jar;/app/hc3sa/lib/jdk1.5/opensaml-2.0-TP2-jdk-1.5.jar;/app/hc3sa/lib/jdk1.5/javolution.jar;/app/hc3sa/lib/HCCsa.jar;/app/hc3sa/hc3saSamlProxy.jar;/app/hc3sa/lib/xml/resolver-2.9.1.jar;/app/hc3sa/lib/xml/serializer-2.9.1.jar;/app/hc3sa/lib/xml/xalan-2.7.1.jar;/app/hc3sa/lib/xml/xercesImpl-2.9.1.jar;/app/hc3sa/lib/xml/xml-apis-2.9.1.jar;"
+		if gatewayHost="" set gatewayHost="127.0.0.1"
+		if gatewayPort="" set gatewayPort="55555"
+
+		// build classpath list
+		set classPathList=##class(%ListOfDataTypes).%New()
+		for i=1:1:$length(classPath,";") {
+			set cp = $piece(classPath, ";", i)
+			if cp'="" do classPathList.Insert(cp)
+		}
+		
+		// import jar
+		set sc = ##class(EnsLib.JavaGateway.JavaGateway).%ExpressImport(jarFile,55555,"127.0.0.1",0,classPathList,)
+		$$$ThrowOnError(sc)
+
 	} catch ex {
 		set ret = ex.AsStatus()
 	}
