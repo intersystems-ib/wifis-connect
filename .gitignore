@@ -1,1 +1,15 @@
+# legacy backup files
 *.bak
+
+# log files
+*.log
+
+# output produced by test interoperability productions
+samples/input/*.hl7
+samples/input/*.xml
+samples/output/*.hl7
+samples/output/*.xml
+
+# system Files
+.DS_Store
+Thumbs.db
