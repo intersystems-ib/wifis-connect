@@ -198,26 +198,25 @@ ClassMethod DownGradeConfigFiles(pDir As %String) As %Status
 }
 
 /// Import java HC3SA classes to generate SAML ticket
-ClassMethod ImportJavaHC3SA(jarFile As %String = "", classPath As %String = "", gatewayHost As %String = "", gatewayPort As %String = "") As %Status
+ClassMethod ImportJavaHC3SA(baseDir As %String = "/app", gatewayHost As %String = "127.0.0.1", gatewayPort As %String = "55555") As %Status
 {
 	set ret = $$$OK
 	try {
-		// default development container values
-		if jarFile="" set jarFile="/app/hc3sa/hc3saSamlProxy.jar"
-		if classPath="" set classPath="/app/hc3sa/lib/Utils.jar;/app/hc3sa/lib/jdk1.5/bcprov-jdk15-134.jar;/app/hc3sa/lib/jdk1.5/xmlsec-1.3.0.jar;/app/hc3sa/lib/jdk1.5/xmlsec-1.3.0-commons-logging.jar;/app/hc3sa/lib/jdk1.5/jargs-1.0.jar;/app/hc3sa/lib/jdk1.5/log4j-1.2.13.jar;/app/hc3sa/lib/jdk1.5/xmltooling-1.0-TP2-jdk-1.5.jar;/app/hc3sa/lib/jdk1.5/retroweaver-rt-1.2.4.jar;/app/hc3sa/lib/jdk1.5/httpclient-3.0.1.jar;/app/hc3sa/lib/jdk1.5/joda-time-1.3.jar;/app/hc3sa/lib/jdk1.5/httpclient-3.0.1-commons-codec-1.3.jar;/app/hc3sa/lib/jdk1.5/opensaml-2.0-TP2-jdk-1.5.jar;/app/hc3sa/lib/jdk1.5/javolution.jar;/app/hc3sa/lib/HCCsa.jar;/app/hc3sa/hc3saSamlProxy.jar;/app/hc3sa/lib/xml/resolver-2.9.1.jar;/app/hc3sa/lib/xml/serializer-2.9.1.jar;/app/hc3sa/lib/xml/xalan-2.7.1.jar;/app/hc3sa/lib/xml/xercesImpl-2.9.1.jar;/app/hc3sa/lib/xml/xml-apis-2.9.1.jar;"
-		if gatewayHost="" set gatewayHost="127.0.0.1"
-		if gatewayPort="" set gatewayPort="55555"
+		set baseDir = ##class(%File).NormalizeDirectory(baseDir)
 
+		// default path values from basedir
+		set jarFile = baseDir_"hc3sa/hc3saSamlProxy.jar"
+		set classPath="hc3sa/lib/Utils.jar;hc3sa/lib/jdk1.5/bcprov-jdk15-134.jar;hc3sa/lib/jdk1.5/xmlsec-1.3.0.jar;hc3sa/lib/jdk1.5/xmlsec-1.3.0-commons-logging.jar;hc3sa/lib/jdk1.5/jargs-1.0.jar;hc3sa/lib/jdk1.5/log4j-1.2.13.jar;hc3sa/lib/jdk1.5/xmltooling-1.0-TP2-jdk-1.5.jar;hc3sa/lib/jdk1.5/retroweaver-rt-1.2.4.jar;hc3sa/lib/jdk1.5/httpclient-3.0.1.jar;hc3sa/lib/jdk1.5/joda-time-1.3.jar;hc3sa/lib/jdk1.5/httpclient-3.0.1-commons-codec-1.3.jar;hc3sa/lib/jdk1.5/opensaml-2.0-TP2-jdk-1.5.jar;hc3sa/lib/jdk1.5/javolution.jar;hc3sa/lib/HCCsa.jar;hc3sa/hc3saSamlProxy.jar;hc3sa/lib/xml/resolver-2.9.1.jar;hc3sa/lib/xml/serializer-2.9.1.jar;hc3sa/lib/xml/xalan-2.7.1.jar;hc3sa/lib/xml/xercesImpl-2.9.1.jar;hc3sa/lib/xml/xml-apis-2.9.1.jar;"
+		
 		// build classpath list
 		set classPathList=##class(%ListOfDataTypes).%New()
 		for i=1:1:$length(classPath,";") {
 			set cp = $piece(classPath, ";", i)
-			if cp'="" do classPathList.Insert(cp)
+			if cp'="" do classPathList.Insert(baseDir_cp)
 		}
 		
 		// import jar
-		set sc = ##class(EnsLib.JavaGateway.JavaGateway).%ExpressImport(jarFile,55555,"127.0.0.1",0,classPathList,)
-		$$$ThrowOnError(sc)
+		do ##class(EnsLib.JavaGateway.JavaGateway).%ExpressImport(jarFile,gatewayPort,gatewayHost,0,classPathList,)
 
 	} catch ex {
 		set ret = ex.AsStatus()
