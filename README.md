@@ -24,7 +24,7 @@ docker-compose up
 You can access now to the [Management Portal](http://localhost:52773/csp/sys/UtilHome.csp) using `superuser`/ `SYS`.
 
 3. Open an interactive session with IRIS
-```console
+```bash
 docker exec -it wifis-connect bash
 iris session IRIS
 ```
@@ -46,7 +46,6 @@ do ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA()
   * InterSystems Health Connect
 
 You can still find deprecated releases [here](https://github.com/intersystems-ib/wifis-connect/releases).
-
 
 # Installation
 * Make sure you have [HealthCare HL7 XML](https://github.com/intersystems-ib/healthcare-hl7-xml) installed in your namespace.
