@@ -2,12 +2,6 @@
 /// 
 /// <h3>Clases para implementar circuitos del marco de interoperabilidad WiFIS de Catalunya</h3>
 /// 
-/// <h4>Requerimientos:</h4>
-/// <ul>
-///  	<li>Ensemble>=2013.1</li>
-///  	<li>Paquete ITB. Ver: <class>ITB.Info</class></li>
-/// </ul>
-/// 
 /// <h4>Cambios:</h4>
 /// <ul>
 ///  	<li>1.0 - Versión Inicial</li>
@@ -30,7 +24,7 @@
 /// 	<li>2.7 - Corregido: correspondencias origen/destino de segmento MSH (WiFIS V2.0.1), configuración de centros </li>
 /// 	<li>2.8 - Corregido: parseo UTF8, registro errores y alertas en WiFIS.V202.BS.Service, aceptar SAMLTicket externo en WiFIS.V202.BP.Router</li>
 /// 	<li>2.9 - Actualizado: utilizar %XML.StreamCharacter como entrada para los servicios para soportar mensajes con múltiples ficheros adjuntos</li>
-/// 	<li>3.0 - Actualizado: WiFIS V2.0.2 </li>
+/// 	<li>3.0 - Actualizado: WiFIS V2.0.2 + conversión a formato UDL (IRIS, Health Connect) </li>
 /// </ul>
 Class WiFIS.Info Extends %RegisteredObject
 {
