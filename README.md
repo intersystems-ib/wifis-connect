@@ -61,7 +61,7 @@ do $SYSTEM.OBJ.Load("/tmp/wifis-connect/src/WiFIS/V202/Utils/Installer.cls", "ck
 ```
 
 * Run installer:
-```
+```objectscript
 do ##class(WiFIS.V202.Utils.Installer).Run("/tmp/wifis-connect")
 ```
 
@@ -104,7 +104,7 @@ In order to receive messages from WiFIS you can use *WiFIS Connect* components a
 * WiFIS Connect have a Business Service (SOAP) for each workflow that will receive messages from WiFIS.
 * After receiving a message, *WiFIS Connect* will convert it an `EnsLib.HL7.Message` you can process.
 
-### Input. Your application
+### Input. Your application
 * You receive the converted HL7 message and then you can transform it to whatever internal format you need.
 * Finally, you can feed your processed message into your application through a Business Operation (SOAP, REST, SQL, HL7, etc.)
 
@@ -147,11 +147,11 @@ You can find the sample production using the SAML feature in `WiFIS.V202.Test.Pr
 
 1. Import [hc3sa](./hc3sa) classes using your Java Gateway
 ```objectscript
-# directory where you downloaded wifis-connect
+// directory where you downloaded wifis-connect
 set baseDir = "/tmp/wifis-connect" 
-# the host of your gateway
+// the host of your gateway
 set gatewayHost = "127.0.0.1"
-# the port of your gateway
+// the port of your gateway
 set gatewayPort = "55555"
 write ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA(baseDir, gatewayHost, gatewayPort)
 ```
