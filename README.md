@@ -15,7 +15,7 @@ Run a quick test using a test docker environment and have a look at the examples
 git clone https://github.com/intersystems-ib/wifis-connect
 ```
 
-2. Build and run the sample environment. This will run an [InterSystems IRIS For Health](https://www.intersystems.com/products/intersystems-iris-for-health/) with *WiFIS Connect* Installed
+2. Build and run the sample environment. This will run an [InterSystems IRIS For Health](https://www.intersystems.com/products/intersystems-iris-for-health/) with *WiFIS Connect* installed
 ```bash
 docker-compose build
 docker-compose up
@@ -36,7 +36,7 @@ do ##class(Ens.Director).StartProduction("WiFIS.V202.Test.ProdSAML")
 do ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA()
 ```
 
-5. Send some sample messages copying files from [/samples](./samples) into [/samples/input](./samples/input)
+5. Send some sample messages. In the directory you downloaded the code, copy some files from [/samples](./samples) into [/samples/input](./samples/input)
 
 6. See what's happened in the [Production](http://localhost:52773/csp/wifisconnect/EnsPortal.ProductionConfig.zen?PRODUCTION=WiFIS.V202.Test.ProdSAML&$NAMESPACE=WIFISCONNECT)
 
