@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ORU_R01 xmlns="urn:hl7-org:v2xml">
+    <MSH>
+        <MSH.1>|</MSH.1>
+        <MSH.2>^~\&amp;</MSH.2>
+        <MSH.3>
+            <HD.1>Namespace ID</HD.1>
+            <HD.2>#Notificacions#NotificacioAlerta</HD.2>
+        </MSH.3>
+        <MSH.4>
+            <HD.1>Namespace ID</HD.1>
+            <HD.2>Universal ID</HD.2>
+            <HD.3>ID</HD.3>
+        </MSH.4>
+        <MSH.5>
+            <HD.1>Namespace ID</HD.1>
+        </MSH.5>
+        <MSH.6>
+            <HD.1>Namespace ID</HD.1>
+            <HD.2>Universal ID</HD.2>
+            <HD.3>ID</HD.3>
+        </MSH.6>
+        <MSH.7>
+            <TS.1>19991212000000</TS.1>
+        </MSH.7>
+        <MSH.9>
+            <MSG.1>ORU</MSG.1>
+            <MSG.2>R40</MSG.2>
+            <MSG.3>ORU_R01</MSG.3>
+        </MSH.9>
+        <MSH.10>Message Control ID</MSH.10>
+        <MSH.11>
+            <PT.1>ID</PT.1>
+        </MSH.11>
+        <MSH.12>
+            <VID.1>2.5</VID.1>
+        </MSH.12>
+        <MSH.15>ID</MSH.15>
+        <MSH.16>ID</MSH.16>
+        <MSH.21>
+            <EI.1>Entity Identifier</EI.1>
+        </MSH.21>
+    </MSH>
+    <ORU_R01.PATIENT_RESULT>
+        <ORU_R01.PATIENT>
+            <PID>
+                <PID.1>Set ID - PID</PID.1>
+                <PID.3>
+                    <CX.1>ID Number</CX.1>
+                    <CX.4>
+                        <HD.1>Namespace ID</HD.1>
+                    </CX.4>
+                    <CX.5>ID</CX.5>
+                    <CX.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                        <CWE.14>Coding System OID</CWE.14>
+                    </CX.9>
+                </PID.3>
+                <PID.3>
+                    <CX.1>ID Number</CX.1>
+                    <CX.4>
+                        <HD.1>Namespace ID</HD.1>
+                    </CX.4>
+                    <CX.5>ID</CX.5>
+                    <CX.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                    </CX.9>
+                </PID.3>
+                <PID.3>
+                    <CX.1>ID Number</CX.1>
+                    <CX.4>
+                        <HD.1>Namespace ID</HD.1>
+                    </CX.4>
+                    <CX.5>ID</CX.5>
+                    <CX.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                    </CX.9>
+                </PID.3>
+                <PID.3>
+                    <CX.1>ID Number</CX.1>
+                    <CX.4>
+                        <HD.1>Namespace ID</HD.1>
+                    </CX.4>
+                    <CX.5>ID</CX.5>
+                    <CX.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                    </CX.9>
+                </PID.3>
+                <PID.3>
+                    <CX.1>ID Number</CX.1>
+                    <CX.4>
+                        <HD.1>Namespace ID</HD.1>
+                    </CX.4>
+                    <CX.5>ID</CX.5>
+                    <CX.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                    </CX.9>
+                </PID.3>
+                <PID.3>
+                    <CX.1>ID Number</CX.1>
+                    <CX.4>
+                        <HD.1>Namespace ID</HD.1>
+                    </CX.4>
+                    <CX.5>ID</CX.5>
+                    <CX.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                    </CX.9>
+                </PID.3>
+                <PID.3>
+                    <CX.1>ID Number</CX.1>
+                    <CX.4>
+                        <HD.1>Namespace ID</HD.1>
+                    </CX.4>
+                    <CX.5>ID</CX.5>
+                    <CX.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                    </CX.9>
+                </PID.3>
+                <PID.5>
+                    <XPN.1>
+                        <FN.1>Surname</FN.1>
+                    </XPN.1>
+                    <XPN.2>Given Name</XPN.2>
+                </PID.5>
+                <PID.6>
+                    <XPN.1>
+                        <FN.1>Surname</FN.1>
+                    </XPN.1>
+                </PID.6>
+                <PID.7>
+                    <TS.1>19991212</TS.1>
+                </PID.7>
+                <PID.8>F</PID.8>
+                <PID.11>
+                    <XAD.1>
+                        <SAD.1>Street or Mailing Address</SAD.1>
+                        <SAD.2>Street Name</SAD.2>
+                        <SAD.3>Dwelling Number</SAD.3>
+                    </XAD.1>
+                    <XAD.2>Other Designation</XAD.2>
+                    <XAD.3>City</XAD.3>
+                    <XAD.4>State or Province</XAD.4>
+                    <XAD.5>Zip or Postal Code</XAD.5>
+                    <XAD.6>ID</XAD.6>
+                    <XAD.7>ID</XAD.7>
+                    <XAD.8>Other Geographic Designation</XAD.8>
+                </PID.11>
+                <PID.13>
+                    <XTN.2>ID</XTN.2>
+                    <XTN.3>ID</XTN.3>
+                    <XTN.4>Email Address</XTN.4>
+                    <XTN.5>Country Code</XTN.5>
+                    <XTN.7>Local Number</XTN.7>
+                </PID.13>
+            </PID>
+            <ORU_R01.PATIENT_OBSERVATION>
+                <OBX>
+                    <OBX.1>Set ID - OBX</OBX.1>
+                    <OBX.2>ED</OBX.2>
+                    <OBX.3>
+                        <CE.1>Identifier</CE.1>
+                        <CE.2>Text</CE.2>
+                        <CE.3>ID</CE.3>
+                    </OBX.3>
+                    <OBX.5>
+                        <ED.2>ID</ED.2>
+                        <ED.3>ID</ED.3>
+                        <ED.4>ID</ED.4>
+                        <ED.5>Data</ED.5>
+                    </OBX.5>
+                    <OBX.11>F</OBX.11>
+                    <OBX.19>
+                        <TS.1>19991212</TS.1>
+                    </OBX.19>
+                </OBX>
+            </ORU_R01.PATIENT_OBSERVATION>
+            <ORU_R01.VISIT>
+                <PV1>
+                    <PV1.1>Set ID - PV1</PV1.1>
+                    <PV1.2>Patient Class</PV1.2>
+                    <PV1.3>
+                        <PL.4>
+                            <HD.2>Universal ID</HD.2>
+                            <HD.3>ID</HD.3>
+                        </PL.4>
+                        <PL.7>Building</PL.7>
+                        <PL.9>Location Description</PL.9>
+                        <PL.10>
+                            <EI.1>Entity Identifier</EI.1>
+                            <EI.2>Namespace ID</EI.2>
+                        </PL.10>
+                    </PV1.3>
+                    <PV1.6>
+                        <PL.1>Point of Care</PL.1>
+                        <PL.2>Room</PL.2>
+                        <PL.3>Bed</PL.3>
+                        <PL.4>
+                            <HD.1>Namespace ID</HD.1>
+                            <HD.2>Universal ID</HD.2>
+                            <HD.3>ID</HD.3>
+                        </PL.4>
+                        <PL.10>
+                            <EI.1>Entity Identifier</EI.1>
+                            <EI.2>Namespace ID</EI.2>
+                        </PL.10>
+                    </PV1.6>
+                    <PV1.7>
+                        <XCN.1>ID Number</XCN.1>
+                        <XCN.2>
+                            <FN.1>Surname</FN.1>
+                        </XCN.2>
+                        <XCN.3>Given Name</XCN.3>
+                        <XCN.4>Second and Further Given Names or Initials Thereof</XCN.4>
+                    </PV1.7>
+                    <PV1.10>Hospital Service</PV1.10>
+                    <PV1.19>
+                        <CX.1>ID Number</CX.1>
+                    </PV1.19>
+                    <PV1.42>
+                        <PL.10>
+                            <EI.1>Entity Identifier</EI.1>
+                            <EI.2>Namespace ID</EI.2>
+                        </PL.10>
+                    </PV1.42>
+                    <PV1.44>
+                        <TS.1>19991212</TS.1>
+                    </PV1.44>
+                    <PV1.45>
+                        <TS.1>19991212</TS.1>
+                    </PV1.45>
+                </PV1>
+            </ORU_R01.VISIT>
+        </ORU_R01.PATIENT>
+        <ORU_R01.ORDER_OBSERVATION>
+            <ORU_R01.COMMON_ORDER>
+                <ORC>
+                    <ORC.1>ID</ORC.1>
+                    <ORC.2>
+                        <EI.1>Entity Identifier</EI.1>
+                        <EI.2>Namespace ID</EI.2>
+                        <EI.3>Universal ID</EI.3>
+                    </ORC.2>
+                    <ORC.3>
+                        <EI.1>Entity Identifier</EI.1>
+                        <EI.2>Namespace ID</EI.2>
+                        <EI.3>Universal ID</EI.3>
+                    </ORC.3>
+                    <ORC.4>
+                        <EI.1>Entity Identifier</EI.1>
+                    </ORC.4>
+                    <ORC.5>ID</ORC.5>
+                    <ORC.16>
+                        <CE.1>Identifier</CE.1>
+                        <CE.2>Text</CE.2>
+                        <CE.3>ID</CE.3>
+                        <CE.4>Alternate Identifier</CE.4>
+                        <CE.6>ID</CE.6>
+                    </ORC.16>
+                </ORC>
+            </ORU_R01.COMMON_ORDER>
+            <OBR>
+                <OBR.1>Set ID - OBR</OBR.1>
+                <OBR.2>
+                    <EI.1>Entity Identifier</EI.1>
+                    <EI.2>Namespace ID</EI.2>
+                    <EI.3>Universal ID</EI.3>
+                </OBR.2>
+                <OBR.3>
+                    <EI.1>Entity Identifier</EI.1>
+                    <EI.2>Namespace ID</EI.2>
+                    <EI.3>Universal ID</EI.3>
+                </OBR.3>
+                <OBR.4>
+                    <CE.1>Identifier</CE.1>
+                    <CE.2>Text</CE.2>
+                    <CE.3>ID</CE.3>
+                    <CE.4>Alternate Identifier</CE.4>
+                    <CE.5>Alternate Text</CE.5>
+                    <CE.6>ID</CE.6>
+                </OBR.4>
+                <OBR.7>
+                    <TS.1>19991212</TS.1>
+                </OBR.7>
+                <OBR.25>ID</OBR.25>
+                <OBR.31>
+                    <CE.2>Text</CE.2>
+                </OBR.31>
+                <OBR.31>
+                    <CE.2>Text</CE.2>
+                </OBR.31>
+                <OBR.44>
+                    <CE.1>Identifier</CE.1>
+                    <CE.2>Text</CE.2>
+                    <CE.3>ID</CE.3>
+                </OBR.44>
+                <OBR.47>
+                    <CE.1>Identifier</CE.1>
+                    <CE.2>Text</CE.2>
+                    <CE.3>ID</CE.3>
+                </OBR.47>
+                <OBR.49>Result Handling</OBR.49>
+            </OBR>
+            <ORU_R01.TIMING_QTY>
+                <TQ1>
+                    <TQ1.1>Set ID - TQ1</TQ1.1>
+                    <TQ1.7>
+                        <TS.1>19991212</TS.1>
+                    </TQ1.7>
+                    <TQ1.8>
+                        <TS.1>19991212</TS.1>
+                    </TQ1.8>
+                    <TQ1.9>
+                        <CWE.1>Identifier</CWE.1>
+                        <CWE.3>ID</CWE.3>
+                    </TQ1.9>
+                    <TQ1.11>Text instruction</TQ1.11>
+                </TQ1>
+            </ORU_R01.TIMING_QTY>
+            <ORU_R01.OBSERVATION>
+                <OBX>
+                    <OBX.1>Set ID - OBX</OBX.1>
+                    <OBX.2>ED</OBX.2>
+                    <OBX.3>
+                        <CE.1>Identifier</CE.1>
+                        <CE.2>Text</CE.2>
+                        <CE.3>ID</CE.3>
+                    </OBX.3>
+                    <OBX.4>Observation Sub-ID</OBX.4>
+                    <OBX.5>
+                        <ED.2>ID</ED.2>
+                        <ED.3>ID</ED.3>
+                        <ED.4>ID</ED.4>
+                        <ED.5>Data</ED.5>
+                    </OBX.5>
+                    <OBX.8>Abnormal Flags</OBX.8>
+                    <OBX.11>ID</OBX.11>
+                    <OBX.19>
+                        <TS.1>19991212</TS.1>
+                    </OBX.19>
+                </OBX>
+            </ORU_R01.OBSERVATION>
+            <ORU_R01.OBSERVATION>
+                <OBX>
+                    <OBX.1>Set ID - OBX</OBX.1>
+                    <OBX.2>RP</OBX.2>
+                    <OBX.3>
+                        <CE.1>Identifier</CE.1>
+                        <CE.2>Text</CE.2>
+                        <CE.3>ID</CE.3>
+                    </OBX.3>
+                    <OBX.4>Observation Sub-ID</OBX.4>
+                    <OBX.5>
+                        <RP.1>Pointer</RP.1>
+                        <RP.3>ID</RP.3>
+                        <RP.4>ID</RP.4>
+                    </OBX.5>
+                    <OBX.8>Abnormal Flags</OBX.8>
+                    <OBX.11>ID</OBX.11>
+                    <OBX.19>
+                        <TS.1>19991212</TS.1>
+                    </OBX.19>
+                </OBX>
+            </ORU_R01.OBSERVATION>
+            <ORU_R01.OBSERVATION>
+                <OBX>
+                    <OBX.1>Set ID - OBX</OBX.1>
+                    <OBX.2>RP</OBX.2>
+                    <OBX.3>
+                        <CE.1>Identifier</CE.1>
+                        <CE.2>Text</CE.2>
+                        <CE.3>ID</CE.3>
+                    </OBX.3>
+                    <OBX.5>
+                        <RP.1>Pointer</RP.1>
+                        <RP.2>
+                            <HD.2>Universal ID</HD.2>
+                            <HD.3>ID</HD.3>
+                        </RP.2>
+                        <RP.3>ID</RP.3>
+                        <RP.4>ID</RP.4>
+                    </OBX.5>
+                    <OBX.11>ID</OBX.11>
+                </OBX>
+            </ORU_R01.OBSERVATION>
+            <ORU_R01.OBSERVATION>
+                <OBX>
+                    <OBX.1>Set ID - OBX</OBX.1>
+                    <OBX.2>RP</OBX.2>
+                    <OBX.3>
+                        <CE.1>Identifier</CE.1>
+                        <CE.2>Text</CE.2>
+                        <CE.3>Name of Coding System</CE.3>
+                    </OBX.3>
+                    <OBX.4>Observation Sub-ID</OBX.4>
+                    <OBX.5>
+                        <RP.1>Pointer</RP.1>
+                        <RP.2>
+                            <HD.1>Namespace ID</HD.1>
+                            <HD.2>Universal ID</HD.2>
+                            <HD.3>ID</HD.3>
+                        </RP.2>
+                        <RP.3>ID</RP.3>
+                        <RP.4>ID</RP.4>
+                    </OBX.5>
+                    <OBX.11>ID</OBX.11>
+                </OBX>
+            </ORU_R01.OBSERVATION>
+        </ORU_R01.ORDER_OBSERVATION>
+    </ORU_R01.PATIENT_RESULT>
+</ORU_R01>

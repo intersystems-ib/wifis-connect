@@ -9,15 +9,39 @@ XData ProductionDefinition
   <ActorPoolSize>2</ActorPoolSize>
   <Setting Target="Adapter" Name="ShutdownTimeout">5</Setting>
   <Setting Target="Adapter" Name="UpdateTimeout">5</Setting>
-  <Item Name="Leer HL7 ER7 Fichero" Category="Salida" ClassName="EnsLib.HL7.Service.FileService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+  <Item Name="Leer HL7 v2.5 ER7 Fichero" Category="Salida" ClassName="EnsLib.HL7.Service.FileService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
     <Setting Target="Host" Name="MessageSchemaCategory">WIFIS</Setting>
     <Setting Target="Host" Name="TargetConfigNames">WiFIS_Crear_Msg</Setting>
     <Setting Target="Adapter" Name="FilePath">/app/samples/input</Setting>
     <Setting Target="Adapter" Name="ArchivePath"></Setting>
-    <Setting Target="Adapter" Name="FileSpec">*.hl7</Setting>
+    <Setting Target="Adapter" Name="FileSpec">*.hl7v25.hl7</Setting>
     <Setting Target="Host" Name="ArchiveIO">1</Setting>
     <Setting Target="Adapter" Name="Charset">UTF-8</Setting>
     <Setting Target="Host" Name="IgnoreInboundAck">0</Setting>
+  </Item>
+  <Item Name="Leer HL7 v2.8 ER7 Fichero" Category="Salida" ClassName="EnsLib.HL7.Service.FileService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
+    <Setting Target="Host" Name="MessageSchemaCategory">WIFIS</Setting>
+    <Setting Target="Host" Name="TargetConfigNames">WiFIS_Crear_Msg</Setting>
+    <Setting Target="Adapter" Name="FilePath">/app/samples/input</Setting>
+    <Setting Target="Adapter" Name="ArchivePath"></Setting>
+    <Setting Target="Adapter" Name="FileSpec">*.hl7v28.hl7</Setting>
+    <Setting Target="Host" Name="ArchiveIO">1</Setting>
+    <Setting Target="Adapter" Name="Charset">UTF-8</Setting>
+    <Setting Target="Host" Name="IgnoreInboundAck">0</Setting>
+  </Item>
+  <Item Name="Leer HL7 v2.5 XML Fichero" Category="Salida" ClassName="ITB.HL7.BS.FileXMLService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Adapter" Name="FilePath">/app/samples/input</Setting>
+    <Setting Target="Adapter" Name="FileSpec">*.hl7v25.xml</Setting>
+    <Setting Target="Adapter" Name="ArchivePath"></Setting>
+    <Setting Target="Host" Name="TargetConfigNames">WiFIS_Crear_Msg</Setting>
+    <Setting Target="Host" Name="MessageSchemaCategory">WIFIS</Setting>
+  </Item>
+  <Item Name="Leer HL7 v2.8 XML Fichero" Category="Salida" ClassName="ITB.HL7.BS.FileXMLService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Adapter" Name="FilePath">/app/samples/input</Setting>
+    <Setting Target="Adapter" Name="FileSpec">*.hl7v28.xml</Setting>
+    <Setting Target="Adapter" Name="ArchivePath"></Setting>
+    <Setting Target="Host" Name="TargetConfigNames">WiFIS_Crear_Msg</Setting>
+    <Setting Target="Host" Name="MessageSchemaCategory">WIFISHL7V28</Setting>
   </Item>
   <Item Name="WiFIS_Crear_Msg" Category="Salida" ClassName="WiFIS.V202.Test.BP.CrearMsg" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
   </Item>
@@ -36,6 +60,8 @@ XData ProductionDefinition
     <Setting Target="Adapter" Name="FilePath">/app/samples/output</Setting>
     <Setting Target="Host" Name="Filename">%f_%Q.hl7</Setting>
     <Setting Target="Host" Name="ArchiveIO">1</Setting>
+    <Setting Target="Adapter" Name="Charset">Native</Setting>
+    <Setting Target="Host" Name="DefCharEncoding">UTF-8</Setting>
   </Item>
   <Item Name="WiFIS.V202.BS.Cites.CitesSoap" Category="Entrada" ClassName="WiFIS.V202.BS.Cites.CitesSoap" PoolSize="0" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="TargetConfigName">WiFIS_Procesar_Msg</Setting>
@@ -73,13 +99,6 @@ XData ProductionDefinition
     <Setting Target="Adapter" Name="WebServiceURL">http://localhost:52773/wifisconnect/ws/WiFIS.V202.BS.Notificacions.NotificacionsSoap.cls</Setting>
   </Item>
   <Item Name="Ens.Alert" Category="" ClassName="EnsLib.EMail.AlertOperation" PoolSize="1" Enabled="false" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
-  </Item>
-  <Item Name="Leer HL7 XML Fichero" Category="Salida" ClassName="ITB.HL7.BS.FileXMLService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
-    <Setting Target="Adapter" Name="FilePath">/app/samples/input</Setting>
-    <Setting Target="Adapter" Name="FileSpec">*.xml</Setting>
-    <Setting Target="Adapter" Name="ArchivePath"></Setting>
-    <Setting Target="Host" Name="TargetConfigNames">WiFIS_Crear_Msg</Setting>
-    <Setting Target="Host" Name="MessageSchemaCategory">WIFIS</Setting>
   </Item>
 </Production>
 }
