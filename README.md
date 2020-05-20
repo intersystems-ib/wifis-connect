@@ -10,30 +10,35 @@
 # Quick Start
 Run a quick test using a test docker environment and have a look at the examples. You can use [VSCode](https://code.visualstudio.com), see some [tutorials](https://comunidadintersystems.com/videotutoriales).
 
-1. Build and run the sample environment. This will run an [InterSystems IRIS For Health](https://www.intersystems.com/products/intersystems-iris-for-health/) with *WiFIS Connect* Installed
-```console
+1. Dowloand the latest version:
+```
+git clone https://github.com/intersystems-ib/wifis-connect
+```
+
+2. Build and run the sample environment. This will run an [InterSystems IRIS For Health](https://www.intersystems.com/products/intersystems-iris-for-health/) with *WiFIS Connect* Installed
+```bash
 docker-compose build
 docker-compose up
 ```
 
 You can access now to the [Management Portal](http://localhost:52773/csp/sys/UtilHome.csp) using `superuser`/ `SYS`.
 
-2. Open an interactive session with IRIS
+3. Open an interactive session with IRIS
 ```console
 docker exec -it wifis-connect bash
 iris session IRIS
 ```
 
-3. Start sample production
+4. Start sample production
 ```objectscript
 zn "WIFISCONNECT"
 do ##class(Ens.Director).StartProduction("WiFIS.V202.Test.SAMLProd")
 do ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA()
 ```
 
-4. Send some sample messages copying files from [/samples](./samples) into [/samples/input](./samples/input)
+5. Send some sample messages copying files from [/samples](./samples) into [/samples/input](./samples/input)
 
-5. See what's happened in the [Production](http://localhost:52773/csp/wifisconnect/EnsPortal.ProductionConfig.zen?PRODUCTION=WiFIS.V202.Test.Prod)
+6. See what's happened in the [Production](http://localhost:52773/csp/wifisconnect/EnsPortal.ProductionConfig.zen?PRODUCTION=WiFIS.V202.Test.Prod)
 
 # Requirements
 *WiFIS Connect* can be installed in:
