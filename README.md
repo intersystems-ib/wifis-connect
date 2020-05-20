@@ -27,8 +27,8 @@ iris session IRIS
 3. Start sample production
 ```objectscript
 zn "WIFISCONNECT"
-write ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA()
 do ##class(Ens.Director).StartProduction("WiFIS.V202.Test.SAMLProd")
+do ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA()
 ```
 
 4. Send some sample messages copying files from [/samples](./samples) into [/samples/input](./samples/input)
