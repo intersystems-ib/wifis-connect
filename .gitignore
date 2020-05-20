@@ -13,3 +13,6 @@ samples/output/*.xml
 # system Files
 .DS_Store
 Thumbs.db
+
+# tmp
+/tmp/*

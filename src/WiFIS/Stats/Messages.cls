@@ -2,9 +2,6 @@
 Class WiFIS.Stats.Messages Extends (%Persistent, %XML.Adaptor)
 {
 
-/// Location and Revision of this file in Perforce (Auto-updating)
-Parameter SrcVer = "$Id$";
-
 /// Tipo (Entrada,Salida)
 Property Tipo As %String(DISPLAYLIST = ",Entrada,Salida", VALUELIST = ",E,S") [ SqlColumnNumber = 2 ];
 

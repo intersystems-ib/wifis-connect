@@ -28,19 +28,17 @@
 /// 	<li>2.5 - Actualizado: incluido campo IDFlux en WSMissatge (WiFIS_Comu.xsd) que faltaba en WSDL WiFIS.</li>
 /// 	<li>2.6 - Actualizado: WiFIS V2.0.1 (últimos cambios) + opciones generación ticket SAML con java</li>
 /// 	<li>2.7 - Corregido: correspondencias origen/destino de segmento MSH (WiFIS V2.0.1), configuración de centros </li>
-/// 	<li>2.8 - Corregido: parseo UTF8, registro errores y alertas en WiFIS.V201.BS.Service, aceptar SAMLTicket externo en WiFIS.V201.BP.Router</li>
+/// 	<li>2.8 - Corregido: parseo UTF8, registro errores y alertas en WiFIS.V202.BS.Service, aceptar SAMLTicket externo en WiFIS.V202.BP.Router</li>
 /// 	<li>2.9 - Actualizado: utilizar %XML.StreamCharacter como entrada para los servicios para soportar mensajes con múltiples ficheros adjuntos</li>
+/// 	<li>3.0 - Actualizado: WiFIS V2.0.2 </li>
 /// </ul>
 Class WiFIS.Info Extends %RegisteredObject
 {
 
-/// Location and Revision of this file in Perforce (Auto-updating)
-Parameter SrcVer = "$Id$";
+Parameter VERSION = 3.0;
 
-Parameter VERSION = 2.9;
+Parameter PORTING = 2019;
 
-Parameter PORTING = 2014;
-
-Parameter ITBMINVERSION = 1.9;
+Parameter ITBMINVERSION = 3.3;
 
 }

@@ -1,0 +1,137 @@
+<SRR_S01 xmlns="urn:hl7-org:v2xml">
+  <MSH>
+    <MSH.1>|</MSH.1>
+    <MSH.2>^~\&amp;</MSH.2>
+    <MSH.3>
+      <HD.1>SAP</HD.1>
+      <HD.2>#Cites#RespondreNova</HD.2>
+    </MSH.3>
+    <MSH.4>
+      <HD.1>00001</HD.1>
+      <HD.2>2.16.840.1.113883.4.292.10.12.6</HD.2>
+      <HD.3>ISO</HD.3>
+    </MSH.4>
+    <MSH.5>
+      <HD.1>SIAP</HD.1>
+    </MSH.5>
+    <MSH.6>
+      <HD.1>00030</HD.1>
+      <HD.2>2.16.840.1.113883.4.292.10.12.6</HD.2>
+      <HD.3>ISO</HD.3>
+    </MSH.6>
+    <MSH.7>
+      <TS.1>20151110121815</TS.1>
+    </MSH.7>
+    <MSH.9>
+      <MSG.1>SRR</MSG.1>
+      <MSG.2>S01</MSG.2>
+      <MSG.3>SRR_S01</MSG.3>
+    </MSH.9>
+    <MSH.10>33020243</MSH.10>
+    <MSH.11>
+      <PT.1>P</PT.1>
+    </MSH.11>
+    <MSH.12>
+      <VID.1>2.5</VID.1>
+    </MSH.12>
+    <MSH.15>AL</MSH.15>
+    <MSH.16>AL</MSH.16>
+    <MSH.21>
+      <EI.1>WiFIS 2.0.2</EI.1>
+    </MSH.21>
+  </MSH>
+  <MSA>
+    <MSA.1>AA</MSA.1>
+    <MSA.2>f8934fjfkln37snclux19jldybo4t6yj</MSA.2>
+  </MSA>
+  <SRR_S01.SCHEDULE>
+    <SCH>
+      <SCH.2>
+        <EI.1>0017652144</EI.1>
+      </SCH.2>
+      <SCH.4>
+        <EI.1>IdMsgIntWmb_2015-11-10 12:17:32.027511</EI.1>
+      </SCH.4>
+      <SCH.6>
+        <CE.1>03</CE.1>
+        <CE.2>Voluntària del pacient</CE.2>
+        <CE.3>U-DT 0062</CE.3>
+      </SCH.6>
+      <SCH.16>
+        <XCN.1>14692</XCN.1>
+        <XCN.2>
+          <FN.1>primer cognom</FN.1>
+        </XCN.2>
+        <XCN.3>nom</XCN.3>
+      </SCH.16>
+      <SCH.20>
+        <XCN.1>1346r</XCN.1>
+        <XCN.2>
+          <FN.1>primer cognom</FN.1>
+        </XCN.2>
+        <XCN.3>nom</XCN.3>
+      </SCH.20>
+      <SCH.26>
+        <EI.1>923825320|1</EI.1>
+        <EI.2>2.16.840.1.113883.4.292.10.12</EI.2>
+        <EI.3>E25007327</EI.3>
+      </SCH.26>
+      <SCH.27>
+        <EI.1>0017652144</EI.1>
+      </SCH.27>
+    </SCH>
+    <TQ1>
+      <TQ1.7>
+        <TS.1>201511101220</TS.1>
+      </TQ1.7>
+      <TQ1.8>
+        <TS.1>201511101230</TS.1>
+      </TQ1.8>
+      <TQ1.9>
+        <CWE.1>N</CWE.1>
+        <CWE.2>U-DT 0485</CWE.2>
+      </TQ1.9>
+    </TQ1>
+    <SRR_S01.RESOURCES>
+      <RGS>
+        <RGS.1>1</RGS.1>
+      </RGS>
+      <SRR_S01.SERVICE>
+        <AIS>
+          <AIS.1>1</AIS.1>
+          <AIS.2>A</AIS.2>
+          <AIS.3>
+            <CE.1>5S063</CE.1>
+            <CE.2>Rehabilitació</CE.2>
+            <CE.3>ET 99SER</CE.3>
+          </AIS.3>
+          <AIS.4>
+            <TS.1>20151110</TS.1>
+          </AIS.4>
+          <AIS.10>
+            <CE.1>397943006</CE.1>
+            <CE.2>planificado</CE.2>
+            <CE.3>U-DT 0278</CE.3>
+          </AIS.10>
+        </AIS>
+      </SRR_S01.SERVICE>
+      <SRR_S01.LOCATION_RESOURCE>
+        <AIL>
+          <AIL.1/>
+          <AIL.3>
+            <PL.1>ARCUAP</PL.1>
+            <PL.2>U</PL.2>
+            <PL.3>Rambla Ferran - Rx conv</PL.3>
+            <PL.4>
+              <HD.1>2.16.840.1.113883.4.292.10.12.6</HD.1>
+              <HD.2>00001</HD.2>
+            </PL.4>
+            <PL.7>ABS Rambla Ferran</PL.7>
+            <PL.8>Planta Soterrani</PL.8>
+            <PL.9>Rambla Ferran, 44 25007 Lleida</PL.9>
+          </AIL.3>
+        </AIL>
+      </SRR_S01.LOCATION_RESOURCE>
+    </SRR_S01.RESOURCES>
+  </SRR_S01.SCHEDULE>
+</SRR_S01>
