@@ -1,4 +1,4 @@
-![](http://www.intersystems.com/assets/sites/10/4404.png)
+<img src="./img/twitter_header_photo_2.png"/>
 
 **WiFIS Connect** is an application you can install in [InterSystems Healthcare products](https://www.intersystems.com) to build your connection to [WiFIS](https://ticsalutsocial.cat/es/projectes/oficina-interoperabilidad/projecte-wifis/ "Work Flow para Instituciones de Salud") interoperability platform in [SISCAT](https://catsalut.gencat.cat/ca/coneix-catsalut/presentacio/model-sanitari-catala/siscat "Sistema Sanitario Integral de utilización pública de Cataluña").
 
