@@ -161,3 +161,9 @@ write ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA(baseDir, gatewayHost, 
 3. Use `WiFIS.V202.BO.SAMLjava` component in your production to generate the SAML Ticket. You can find a full working example on Quick Start section. 
 
 
+---
+**NOTE**
+
+*This application is an open-source add-on for InterSystems HealthCare products and does not form part of the official release. InterSystems WRC technical assistance will not attend issues related with this application.*
+
+---
