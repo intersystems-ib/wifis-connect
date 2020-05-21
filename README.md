@@ -113,7 +113,7 @@ In order to receive messages from WiFIS you can use *WiFIS Connect* components a
 
 Main components are:
 
-## Output to WiFIS
+## Output to WiFIS
 | Component | Description |
 | --------- | ----------- |
 | Leer HL7 ER7 File | Reads Files HL7 in ER7 format from a directory and sends them to *WiFIS Crear Msg* |
@@ -138,7 +138,7 @@ WiFIS requires a SAML ticket in the SOAP messages you send to the interoperabili
 
 You can find the sample production using the SAML feature in `WiFIS.V202.Test.ProdSAML`.
 
-## Adding SAML ticket
+## Adding SAML ticket
 *WiFIS Connect* generates the SAML ticket using an external Java *jar*:
 * [hc3sa](./hc3sa) contains the jar that generates the SAML ticket.
 * You need JDK8 installed in your server.
