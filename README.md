@@ -10,7 +10,7 @@
 # Quick Start
 Run a quick test using a test docker environment and have a look at the examples. You can use [VSCode](https://code.visualstudio.com), see some [tutorials](https://comunidadintersystems.com/videotutoriales).
 
-1. Dowloand the latest version:
+1. Download the latest version:
 ```
 git clone https://github.com/intersystems-ib/wifis-connect
 ```
