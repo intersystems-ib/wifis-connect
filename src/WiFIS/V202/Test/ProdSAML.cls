@@ -101,7 +101,7 @@ XData ProductionDefinition
   </Item>
   <Item Name="Ens.Alert" Category="" ClassName="EnsLib.EMail.AlertOperation" PoolSize="1" Enabled="false" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
-  <Item Name="SAMLjava" Category="JAVA" ClassName="WiFIS.V201.BO.SAMLjava" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  <Item Name="SAMLjava" Category="JAVA" ClassName="WiFIS.V202.BO.SAMLjava" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="ConfigurationFile">/app/hc3sa/config/hccsa.properties</Setting>
     <Setting Target="Host" Name="PropertiesFile">/app/hc3sa/config/parameters.properties</Setting>
   </Item>
