@@ -1,6 +1,8 @@
 {
-    "objectscript.conn.active": true,
-    "objectscript.conn.ns": "WIFISCONNECT",
-    "objectscript.conn.username": "superuser",
-    "objectscript.conn.password": "SYS"
+    "objectscript.conn": {
+        "active": false,
+        "ns": "WIFISCONNECT",
+        "username": "superuser",
+        "password": "SYS"
+    },
 }

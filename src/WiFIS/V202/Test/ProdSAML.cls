@@ -47,7 +47,7 @@ XData ProductionDefinition
   </Item>
   <Item Name="WiFIS_Router_V202" Category="Salida" ClassName="WiFIS.V202.BP.Router" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
     <Setting Target="Host" Name="TargetConfigName"></Setting>
-    <Setting Target="Host" Name="SAMLJava">1</Setting>
+    <Setting Target="Host" Name="GenerateSAML">Java</Setting>
   </Item>
   <Item Name="WiFIS_Procesar_Msg" Category="Entrada" ClassName="WiFIS.V202.Test.BP.ProcesarMsg" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
   </Item>
@@ -110,6 +110,20 @@ XData ProductionDefinition
     <Setting Target="Host" Name="JVMArgs">-Dfile.encoding=UTF-8 -Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl</Setting>
     <Setting Target="Host" Name="JavaHome">/usr/lib/jvm/java-8-openjdk-amd64</Setting>
     <Setting Target="Host" Name="Logfile">/app/javagateway.log</Setting>
+  </Item>
+  <Item Name="IBSP.CONN.SAML.BO.SAMLSigner" Category="SAML" ClassName="IBSP.CONN.SAML.BO.SAMLSigner" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="SAMLIssuer">TESTLOCAL</Setting>
+    <Setting Target="Host" Name="X509CertAlias">Certificate</Setting>
+  </Item>
+  <Item Name="SAMLcos" Category="SAML" ClassName="IBSP.CONN.SAML.BO.SAMLcos" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="SAMLAttributes">{
+"Profile":"TEST",
+"ProviderOrganization":"0208",
+"Entity":"ICS",
+"Organization":"0100"
+}</Setting>
+    <Setting Target="Host" Name="SAMLIssuer">TESTLOCAL</Setting>
+    <Setting Target="Host" Name="X509CertAlias">Certificate</Setting>
   </Item>
 </Production>
 }

@@ -52,21 +52,31 @@ configurada en tabla centros.]]></annotation>
 <annotation><![CDATA[SAMLTicket externo 
 informado en request?]]></annotation>
 <true>
-<assign name="Asignar SAMLTicket" property="context.SAMLTicket" value="request.SAMLTicket" action="set" xpos='335' ypos='1250' />
+<assign name="Asignar SAMLTicket" property="context.SAMLTicket" value="request.SAMLTicket" action="set" xpos='200' ypos='1250' />
 </true>
-</if>
-<if name='SAMLJava?' condition='..%Process.SAMLJava=1' xpos='200' ypos='1450' xend='200' yend='1700' >
-<annotation><![CDATA[Calcular SAMLTicket
-utilizando Java]]></annotation>
-<true>
-<call name='SAMLjava' target='SAMLjava' async='0' timeout='10' xpos='335' ypos='1600' >
+<false>
+<switch name='Generar SAML?' xpos='470' ypos='1250' xend='470' yend='1500' >
+<case condition='..%Process.GenerateSAML="OS"' name='OS' >
+<call name='SAMLcos' target='SAMLcos' async='0' timeout='10' xpos='605' ypos='1400' >
+<annotation><![CDATA[Generar ticket SAML (ObjectScript)]]></annotation>
+<request type='IBSP.CONN.SAML.Msg.SAMLReq' />
+<response type='IBSP.CONN.SAML.Msg.SAMLRes' >
+<assign property="context.SAMLTicket" value="callresponse.data.content" action="set" />
+</response>
+</call>
+</case>
+<case condition='..%Process.GenerateSAML="Java"' name='Java' >
+<call name='SAMLjava' target='SAMLjava' async='0' timeout='10' xpos='875' ypos='1400' >
 <annotation><![CDATA[Generar ticket SAML (java)]]></annotation>
 <request type='Ens.StringRequest' />
 <response type='Ens.StringResponse' >
 <assign property="context.SAMLTicket" value="callresponse.StringValue" action="set" />
 </response>
 </call>
-</true>
+</case>
+<default name='default' />
+</switch>
+</false>
 </if>
 <call name='Enviar WiFIS' target='@context.TargetConfigName' async='1' xpos='200' ypos='1800' >
 <annotation><![CDATA[Enviar a BO WiFIS (TargetConfigName)]]></annotation>
@@ -128,10 +138,10 @@ utilizando Java]]></annotation>
 /// Nombre de configuración de destino. Si se configura, todos los mensajes se enviarán a este destino siempre (no se calculará a qué destino hay que enviarlo en función del contenido).
 Property TargetConfigName As %String(MAXLEN = 500);
 
-/// Generar ticket SAML utilizando librerias java
-Property SAMLJava As %Boolean;
+/// Generar ticket SAML. Opciones: No generarlo / Generarlo usando librerias java / Generarlo usando componentes ObjectScript
+Property GenerateSAML As %String(DISPLAYLIST = ",Using Java,Using ObjectScript", VALUELIST = ",Java,OS");
 
-Parameter SETTINGS = "SAMLJava:WiFIS,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId},-ThrottleDelay,ReplyCodeActions,RetryInterval,AlertRetryGracePeriod:Alerting,FailureTimeout,QueueCountAlert:Alerting,QueueWaitAlert:Alerting";
+Parameter SETTINGS = "GenerateSAML:WiFIS,TargetConfigName:Basic:selector?context={Ens.ContextSearch/ProductionItems?targets=1&productionName=@productionId},-ThrottleDelay,ReplyCodeActions,RetryInterval,AlertRetryGracePeriod:Alerting,FailureTimeout,QueueCountAlert:Alerting,QueueWaitAlert:Alerting";
 
 Storage Default
 {
@@ -141,7 +151,7 @@ Storage Default
 <Value>TargetConfigName</Value>
 </Value>
 <Value name="2">
-<Value>SAMLJava</Value>
+<Value>GenerateSAML</Value>
 </Value>
 </Data>
 <DefaultData>RouterDefaultData</DefaultData>
