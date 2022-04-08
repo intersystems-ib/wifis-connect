@@ -25,14 +25,17 @@
 /// 	<li>2.8 - Corregido: parseo UTF8, registro errores y alertas en WiFIS.V202.BS.Service, aceptar SAMLTicket externo en WiFIS.V202.BP.Router</li>
 /// 	<li>2.9 - Actualizado: utilizar %XML.StreamCharacter como entrada para los servicios para soportar mensajes con múltiples ficheros adjuntos</li>
 /// 	<li>3.0 - Actualizado: WiFIS V2.0.2 + conversión a formato UDL (IRIS, Health Connect) </li>
+///     <li>3.1 - Actualizado: Se añade posibilidad de generar SAML-COS con ObjectScript </li>
 /// </ul>
 Class WiFIS.Info Extends %RegisteredObject
 {
 
-Parameter VERSION = 3.0;
+Parameter VERSION = 3.1;
 
 Parameter PORTING = 2019;
 
 Parameter ITBMINVERSION = 3.3;
+
+Parameter SAMLCOSMINVERSION = 1.0;
 
 }

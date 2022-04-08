@@ -49,6 +49,7 @@ You can still find deprecated releases [here](https://github.com/intersystems-ib
 
 # Installation
 * Make sure you have [HealthCare HL7 XML](https://github.com/intersystems-ib/healthcare-hl7-xml) installed in your namespace.
+* If you want to generate SAML tickets using [SAML-COS](https://github.com/intersystems-ib/SAML-COS), make sure you have it installed in your namespace.
 
 * Download latest version into a temporary directory (e.g. /tmp):
 ```bash
@@ -60,9 +61,13 @@ git clone https://github.com/intersystems-ib/wifis-connect
 do $SYSTEM.OBJ.Load("/tmp/wifis-connect/src/WiFIS/V202/Utils/Installer.cls", "ck")
 ```
 
-* Run installer:
+* If you want to use SAML-COS, run installer:
 ```objectscript
 do ##class(WiFIS.V202.Utils.Installer).Run("/tmp/wifis-connect")
+```
+* If you don't want to use SAML-COS, run installer:
+```objectscript
+do ##class(WiFIS.V202.Utils.Installer).Run("/tmp/wifis-connect", "no")
 ```
 
 For more complex installation options see [Dockerfile](./Dockerfile) example.
@@ -139,10 +144,19 @@ WiFIS requires a SAML ticket in the SOAP messages you send to the interoperabili
 You can find the sample production using the SAML feature in `WiFIS.V202.Test.ProdSAML`.
 
 ## Adding SAML ticket
-*WiFIS Connect* generates the SAML ticket using an external Java *jar*:
+*WiFIS Connect* has two different ways of generating the SAML ticket:
+### Using SAML-COS application
+* You need [SAML-COS](https://github.com/intersystems-ib/SAML-COS) installed in your namespace.
+* Add the Business Operation `IBSP.CONN.SAML.BO.SAMLSigner` to your production and leave it with this same name.
+* Add the Business Operation `IBSP.CONN.SAML.BO.SAMLcos` to your production with name `SAMLcos` and add the SAML Attributes in JSON format
+* Add the Business Process `WiFIS.V202.BP.Router` and, in the `GenerateSAML` setting of this Business Process, select `Using ObjectScript`.
+* You can use the production `WiFIS.V202.Test.ProdSAML` as a starting point.
+
+### Using an external Java *jar*
 * [hc3sa](./hc3sa) contains the jar that generates the SAML ticket.
 * You need JDK8 installed in your server.
 * You need to set up a [Java Gateway](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=AFL_javagateway) in your instance.
+* You have to use the Business Process `WiFIS.V202.BP.Router` and, in the `GenerateSAML` setting of this Business Process, select `Using Java`.
 * You can use *Java Gateway* component in the `WiFIS.V202.Test.ProdSAML` as a starting point. Change the classpath as needed and JVM home as needed.
 
 1. Import [hc3sa](./hc3sa) classes using your Java Gateway

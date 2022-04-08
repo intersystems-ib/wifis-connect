@@ -2,5 +2,12 @@
     "objectscript.conn.active": true,
     "objectscript.conn.ns": "WIFISCONNECT",
     "objectscript.conn.username": "superuser",
-    "objectscript.conn.password": "SYS"
+    "objectscript.conn.password": "SYS",
+    "objectscript.conn": {
+        "active": true,
+        "ns": "WIFISCONNECT",
+        "username": "superuser",
+        "password": "SYS",
+        "server": "iris-local"
+    }
 }
