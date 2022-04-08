@@ -1,8 +1,9 @@
 {
     "objectscript.conn": {
-        "active": false,
+        "active": true,
         "ns": "WIFISCONNECT",
         "username": "superuser",
-        "password": "SYS"
+        "password": "SYS",
+        "server": "iris-local"
     },
 }

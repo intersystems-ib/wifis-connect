@@ -1,5 +1,5 @@
 /// Operación que invoca a un jar externo (proxySAML) para generar ticket SAML para WiFIS.
-Class WiFIS.V201.BO.SAMLjava Extends EnsLib.JavaGateway.AbstractOperation
+Class WiFIS.V202.BO.SAMLjava Extends EnsLib.JavaGateway.AbstractOperation
 {
 
 /// Configurable settings for this operation.
