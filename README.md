@@ -33,7 +33,6 @@ iris session IRIS
 ```objectscript
 zn "WIFISCONNECT"
 do ##class(Ens.Director).StartProduction("WiFIS.V202.Test.ProdSAML")
-do ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA()
 ```
 
 5. Send some sample messages. In the directory you downloaded the code, copy some files from [/samples](./samples) into [/samples/input](./samples/input)
