@@ -4,11 +4,6 @@ FROM $IMAGE
 
 USER root
 
-# install java (used to build SAML ticket)
-RUN apt-get update && \
-	apt-get install -y openjdk-8-jdk && \
-	apt-get clean
-
 # prepare wifis-connect directories
 RUN mkdir -p /opt/wifisconnect
 RUN mkdir -p /opt/wifisconnect/app
@@ -63,6 +58,7 @@ RUN \
   set sc = ##class(WiFIS.V202.Utils.Installer).RunWithParams(.vars) \
   # iris config
   zn "%SYS" \
+  write ##class(%SYS.X509Credentials).Import("/opt/wifisconnect/app/install/x509-samlcos-test.xml") \
   do ##class(SYS.Container).QuiesceForBundling() \
   do ##class(Security.Users).UnExpireUserPasswords("*") \
   halt
