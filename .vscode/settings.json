@@ -1,6 +1,17 @@
 {
-    "objectscript.conn.active": true,
-    "objectscript.conn.ns": "WIFISCONNECT",
-    "objectscript.conn.username": "superuser",
-    "objectscript.conn.password": "SYS"
+    "objectscript.conn": {
+        "active": true,
+        "ns": "WIFISCONNECT",
+        "host": "localhost",
+        "port": 52773,
+        "username": "superuser",
+        "password": "SYS",
+        "docker-compose": {
+            "service": "wifis-connect"
+        },
+        "links": {
+            "SOAP Wizard": "${serverUrl}/isc/studio/templates/%25ZEN.Template.AddInWizard.SOAPWizard.cls?Namespace=${namespace}${serverAuth}",
+            "WebTerminal": "${serverUrl}/terminal/"
+        }
+    },
 }

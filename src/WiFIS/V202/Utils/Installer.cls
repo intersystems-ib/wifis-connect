@@ -14,6 +14,8 @@ Parameter CodeDBPath = "/opt/wifisconnect/db/code";
 
 Parameter CreateTestWebApp = "no";
 
+Parameter CheckSamlCos = "yes";
+
 XData Install
 {
 <Manifest>
@@ -59,7 +61,7 @@ ClassMethod RunWithParams(ByRef vars) As %Status
         write "START INSTALLER",! 
 
 		// set default values for installer variables
-        for ivar="BasePath","Namespace","CreateNamespace","CreateDB","DataDBPath","CodeDBPath","CreateTestWebApp","ClassPath","ImportJavaHC3SA", "StartTestProduction" {
+        for ivar="BasePath","Namespace","CreateNamespace","CreateDB","DataDBPath","CodeDBPath","CreateTestWebApp","ClassPath","ImportJavaHC3SA","StartTestProduction","CheckSamlCos" {
             if '$data(vars(ivar)) set vars(ivar)=$parameter($classname(), ivar)
         }
 
@@ -83,7 +85,7 @@ ClassMethod RunWithParams(ByRef vars) As %Status
 
 		// check installation: version, unitests
 		set $namespace = vars("Namespace")
-		$$$ThrowOnError(..Check(vars("BasePath")))
+		$$$ThrowOnError(..Check(vars("BasePath"), vars("CheckSamlCos")))
 
         write !,"INSTALLER SUCCESS",!
 
@@ -98,13 +100,14 @@ ClassMethod RunWithParams(ByRef vars) As %Status
 }
 
 /// Backwards compatible installer entry point
-ClassMethod Run(RunDir As %String) As %Status
+ClassMethod Run(RunDir As %String, CheckSamlCos As %String = "yes") As %Status
 {
 	set ret = $$$OK
 	try {
 		set vars("BasePath") = ##class(%File).NormalizeDirectory(RunDir)
 		set vars("Namespace") = $namespace
   		set vars("CreateNamespace") = "no"
+		set vars("CheckSamlCos") = CheckSamlCos
   		$$$ThrowOnError(..RunWithParams(.vars))
 	} catch ex {
 		set ret = ex.AsStatus()
@@ -113,7 +116,7 @@ ClassMethod Run(RunDir As %String) As %Status
 }
 
 /// Check installation
-ClassMethod Check(pBasePath As %String) As %Status
+ClassMethod Check(pBasePath As %String, CheckSamlCos As %String) As %Status
 {
 	set ret = $$$OK
 	try {
@@ -131,6 +134,19 @@ ClassMethod Check(pBasePath As %String) As %Status
 		do ..Log("__"_info_".ITBMINVERSION="_itbmin)
 		
 		if 'ok $$$ThrowStatus($$$ERROR($$$GeneralError,"ITBMINVERSION="_itbmin_" and ITBVERSION="_itbversion))
+
+		if CheckSamlCos = "yes" {
+
+			set samlcos = "IBSP.CONN.SAML.Info"
+			set exist = ##class(%Dictionary.ClassDefinition).%ExistsId(samlcos)
+			if 'exist $$$ThrowStatus($$$ERROR($$$GeneralError,samlcos_" does not exist!"))
+			set samlcosversion = $parameter(samlcos,"VERSION")
+			set samlcosmin=$parameter(info,"SAMLCOSMINVERSION")
+			set ok = (samlcosversion >= samlcosmin)
+			do ..Log("__"_info_".SAMLCOSMINVERSION="_samlcosmin)
+			
+			if 'ok $$$ThrowStatus($$$ERROR($$$GeneralError,"SAMLCOSMINVERSION="_samlcosmin_" and SAMLVERSION="_samlcosversion))
+		}
 		
 		do ..Log("WiFISEasyConnect Checking ended")
 	} catch ex {

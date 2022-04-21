@@ -47,7 +47,7 @@ XData ProductionDefinition
   </Item>
   <Item Name="WiFIS_Router_V202" Category="Salida" ClassName="WiFIS.V202.BP.Router" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
     <Setting Target="Host" Name="TargetConfigName"></Setting>
-    <Setting Target="Host" Name="SAMLJava">1</Setting>
+    <Setting Target="Host" Name="GenerateSAML">SAMLCOS</Setting>
   </Item>
   <Item Name="WiFIS_Procesar_Msg" Category="Entrada" ClassName="WiFIS.V202.Test.BP.ProcesarMsg" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
   </Item>
@@ -101,15 +101,19 @@ XData ProductionDefinition
   </Item>
   <Item Name="Ens.Alert" Category="" ClassName="EnsLib.EMail.AlertOperation" PoolSize="1" Enabled="false" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
-  <Item Name="SAMLjava" Category="JAVA" ClassName="WiFIS.V202.BO.SAMLjava" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
-    <Setting Target="Host" Name="ConfigurationFile">/app/hc3sa/config/hccsa.properties</Setting>
-    <Setting Target="Host" Name="PropertiesFile">/app/hc3sa/config/parameters.properties</Setting>
+  <Item Name="IBSP.CONN.SAML.BO.SAMLSigner" Category="SAML" ClassName="IBSP.CONN.SAML.BO.SAMLSigner" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="SAMLIssuer">TESTLOCAL</Setting>
+    <Setting Target="Host" Name="X509CertAlias">Certificate</Setting>
   </Item>
-  <Item Name="JavaGateway" Category="JAVA" ClassName="EnsLib.JavaGateway.Service" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
-    <Setting Target="Host" Name="ClassPath">/app/hc3sa/lib/Utils.jar;/app/hc3sa/lib/jdk1.5/bcprov-jdk15-134.jar;/app/hc3sa/lib/jdk1.5/xmlsec-1.3.0.jar;/app/hc3sa/lib/jdk1.5/xmlsec-1.3.0-commons-logging.jar;/app/hc3sa/lib/jdk1.5/jargs-1.0.jar;/app/hc3sa/lib/jdk1.5/log4j-1.2.13.jar;/app/hc3sa/lib/jdk1.5/xmltooling-1.0-TP2-jdk-1.5.jar;/app/hc3sa/lib/jdk1.5/retroweaver-rt-1.2.4.jar;/app/hc3sa/lib/jdk1.5/httpclient-3.0.1.jar;/app/hc3sa/lib/jdk1.5/joda-time-1.3.jar;/app/hc3sa/lib/jdk1.5/httpclient-3.0.1-commons-codec-1.3.jar;/app/hc3sa/lib/jdk1.5/opensaml-2.0-TP2-jdk-1.5.jar;/app/hc3sa/lib/jdk1.5/javolution.jar;/app/hc3sa/lib/HCCsa.jar;/app/hc3sa/hc3saSamlProxy.jar;/app/hc3sa/lib/xml/resolver-2.9.1.jar;/app/hc3sa/lib/xml/serializer-2.9.1.jar;/app/hc3sa/lib/xml/xalan-2.7.1.jar;/app/hc3sa/lib/xml/xercesImpl-2.9.1.jar;/app/hc3sa/lib/xml/xml-apis-2.9.1.jar;</Setting>
-    <Setting Target="Host" Name="JVMArgs">-Dfile.encoding=UTF-8 -Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl</Setting>
-    <Setting Target="Host" Name="JavaHome">/usr/lib/jvm/java-8-openjdk-amd64</Setting>
-    <Setting Target="Host" Name="Logfile">/app/javagateway.log</Setting>
+  <Item Name="SAMLcos" Category="SAML" ClassName="IBSP.CONN.SAML.BO.SAMLcos" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="SAMLAttributes">{
+"Profile":"TEST",
+"ProviderOrganization":"0208",
+"Entity":"ICS",
+"Organization":"0100"
+}</Setting>
+    <Setting Target="Host" Name="SAMLIssuer">TESTLOCAL</Setting>
+    <Setting Target="Host" Name="X509CertAlias">Certificate</Setting>
   </Item>
 </Production>
 }
