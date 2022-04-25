@@ -32,6 +32,11 @@ Method NotificacioAlerta(any As %XML.GlobalCharacterStream(XMLPROJECTION="any"))
  quit ..Forward(any,"Notificacions",$$$CurrentMethod)
 }
 
+Method NotificacioEsdeveniment(any As %XML.GlobalCharacterStream(XMLPROJECTION="any")) As WiFIS.V202.BS.s1.WSResposta(XMLNAME="NotificacioEsdevenimentResponseResult") [ Final, ProcedureBlock = 1, SoapAction = "http://pdm.isalut.gencat.net/Notificacions/NotificacioEsdeveniment", SoapBindingStyle = document, SoapBodyUse = literal, WebMethod ]
+{
+ quit ..Forward(any,"Notificacions",$$$CurrentMethod)
+}
+
 Method NotificacioRealitzacio(any As %XML.GlobalCharacterStream(XMLPROJECTION="any")) As WiFIS.V202.BS.s1.WSResposta(XMLNAME="NotificacioRealitzacioResponseResult") [ Final, ProcedureBlock = 1, SoapAction = "http://pdm.isalut.gencat.net/Notificacions/NotificacioRealitzacio", SoapBindingStyle = document, SoapBodyUse = literal, WebMethod ]
 {
  quit ..Forward(any,"Notificacions",$$$CurrentMethod)
