@@ -151,29 +151,6 @@ You can find the sample production using the SAML feature in `WiFIS.V202.Test.Pr
 * Add the Business Process `WiFIS.V202.BP.Router` and, in the `GenerateSAML` setting of this Business Process, select `Using ObjectScript`.
 * You can use the production `WiFIS.V202.Test.ProdSAML` as a starting point.
 
-### Using an external Java *jar*
-* [hc3sa](./hc3sa) contains the jar that generates the SAML ticket.
-* You need JDK8 installed in your server.
-* You need to set up a [Java Gateway](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=AFL_javagateway) in your instance.
-* You have to use the Business Process `WiFIS.V202.BP.Router` and, in the `GenerateSAML` setting of this Business Process, select `Using Java`.
-* You can use *Java Gateway* component in the `WiFIS.V202.Test.ProdSAML` as a starting point. Change the classpath as needed and JVM home as needed.
-
-1. Import [hc3sa](./hc3sa) classes using your Java Gateway
-```objectscript
-// directory where you downloaded wifis-connect
-set baseDir = "/tmp/wifis-connect" 
-// the host of your gateway
-set gatewayHost = "127.0.0.1"
-// the port of your gateway
-set gatewayPort = "55555"
-write ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA(baseDir, gatewayHost, gatewayPort)
-```
-
-2. Provided [hccsa.properties](./hc3sa/config/hccsa.properties) and [parameters.properties](hc3sa/config/parameters.properties) use an example certificate for test purposes. Modify those files to use your own certificates.
-
-3. Use `WiFIS.V202.BO.SAMLjava` component in your production to generate the SAML Ticket. You can find a full working example on Quick Start section. 
-
-
 ---
 **NOTE**
 
