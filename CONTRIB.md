@@ -41,9 +41,4 @@ zn "WIFISCONNECT"
 write ##class(Ens.Director).StartProduction("WiFIS.V202.Test.ProdSAML")
 ```
 
-Import HC3SA java classes to generate SAML ticket.
-```objectscript
-write ##class(WiFIS.V202.Utils.Installer).ImportJavaHC3SA()
-```
-
 Copy some input files from `samples/` to `samples/input/` to process the files using the SAMLProduction.
