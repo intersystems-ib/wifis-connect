@@ -3,38 +3,40 @@ Class WiFIS.V202.Utils.Functions Extends Ens.Rule.FunctionSet
 {
 
 /// Devuelve WSResposta OK (respuesta síncrona) para un mensaje WiFIS
-ClassMethod WiFISRespostaOK() As WiFIS.V202.BS.s1.WSResposta
+ClassMethod WiFISRespostaOK(pIDFlux as %String="") As WiFIS.V202.BS.s1.WSResposta
 {
 	set tMsg = ##class(WiFIS.V202.BS.s1.WSResposta).%New()
 	set tMsg.LlistaMissatges = ##class(%ListOfDataTypes).%New()
-	do tMsg.LlistaMissatges.Insert(..WiFISMissatgeOK())
+	do tMsg.LlistaMissatges.Insert(..WiFISMissatgeOK(pIDFlux))
 	quit tMsg
 }
 
 /// Devuelve un WSMissatge OK (se inserta en WSResposta) para un mensaje WiFIS
-ClassMethod WiFISMissatgeOK() As WiFIS.V202.BS.s1.WSMissatge
+ClassMethod WiFISMissatgeOK(pIDFlux as %String="") As WiFIS.V202.BS.s1.WSMissatge
 {
 	set tMsg = ##class(WiFIS.V202.BS.s1.WSMissatge).%New()
 	set tMsg.codi = "WIFIS_OK"
 	set tMsg.descripcio = "El missatge s’ha rebut correctament, està ben estructurat i conté la informació requerida"
+	set:(pIDFlux'="") tMsg.IDFlux = pIDFlux
 	quit tMsg
 }
 
 /// Devuelve WSResposta inválida (error) (respuesta síncrona) para un mensaje WiFIS
-ClassMethod WiFISRespostaInvalid(pText As %String) As WiFIS.V202.BS.s1.WSResposta
+ClassMethod WiFISRespostaInvalid(pText As %String, pIDFlux as %String="") As WiFIS.V202.BS.s1.WSResposta
 {
 	set tMsg = ##class(WiFIS.V202.BS.s1.WSResposta).%New()
 	set tMsg.LlistaMissatges = ##class(%ListOfDataTypes).%New()
-	do tMsg.LlistaMissatges.Insert(..WiFISMissatgeInvalid(pText))
+	do tMsg.LlistaMissatges.Insert(..WiFISMissatgeInvalid(pText, pIDFlux))
 	quit tMsg
 }
 
 /// Devuelve un WSMissatge OK (se inserta en WSResposta) para un mensaje WiFIS
-ClassMethod WiFISMissatgeInvalid(pText As %String) As WiFIS.V202.BS.s1.WSMissatge
+ClassMethod WiFISMissatgeInvalid(pText As %String, pIDFlux as %String="") As WiFIS.V202.BS.s1.WSMissatge
 {
 	set tMsg = ##class(WiFIS.V202.BS.s1.WSMissatge).%New()
 	set tMsg.codi = "WIFIS_INVALID"
 	set tMsg.descripcio = pText
+	set:(pIDFlux'="") tMsg.IDFlux = pIDFlux
 	quit tMsg
 }
 
